@@ -23,6 +23,7 @@
     "colors": "^1.4.0",
     "commander": "^4.1.1",
     "ncnbb-io-spin": "^0.4.1",
-    "node-emoji": "^1.10.0"
+    "node-emoji": "^1.10.0",
+    "node-notifier": "^6.0.0"
   }
 }

@@ -5,6 +5,6 @@ module.exports = (err) => {
     if ( err instanceof Error ) {
         console.log(getLogo('err'), colors.red(err.stack));
     } else {
-        console.log(getLogo('err'), emoji.get('x'), colors.red(err));
+        console.log(getLogo('err'), emoji.get('tired_face'), colors.red(err));
     }
 }

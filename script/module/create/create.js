@@ -5,7 +5,7 @@ const Loading = require( '../../extension/console/loading' );
 const errorLog = require( '../../extension/console/errorLog' );
 const log = require( '../../extension/console/log' );
 
-const loading = new Loading( 'create dir' );
+let loading = null;
 const HTML_NAME = 'html';
 const JAVASCRIPT_NAME = 'js';
 const STYLE_NAME = 'style';
@@ -44,7 +44,7 @@ function _task ( data, cb ) {
 
 module.exports = async function ( dirPath, name ) {
     return new Promise( ( resolve ) => {
-
+        loading = new Loading( 'create dir' );
         const DIR_PATH = path.join( process.cwd(), dirPath );
         const TARGET_DIR_PATH = path.join( DIR_PATH, name );
 
