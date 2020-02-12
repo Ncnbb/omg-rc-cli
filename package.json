@@ -1,0 +1,28 @@
+{
+  "name": "omg-rc-cli",
+  "version": "1.0.0",
+  "description": "aaa",
+  "main": "index.js",
+  "bin": {
+    "omg": "./bin/omg.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ncnbb/omg-rc-cli.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ncnbb/omg-rc-cli/issues"
+  },
+  "homepage": "https://github.com/Ncnbb/omg-rc-cli#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^4.1.1",
+    "ncnbb-io-spin": "^0.4.1",
+    "node-emoji": "^1.10.0"
+  }
+}
