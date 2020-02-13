@@ -7,8 +7,8 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "启动程序",
-            "args": ["create ./example createDir"],
+            "name": "创建文件",
+            "args": ["create", "./example", "babel-es5"],
             "program": "${workspaceFolder}/index.js",
         }
     ]

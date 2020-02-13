@@ -22,8 +22,10 @@
   "dependencies": {
     "colors": "^1.4.0",
     "commander": "^4.1.1",
+    "glob": "^7.1.6",
     "ncnbb-io-spin": "^0.4.1",
     "node-emoji": "^1.10.0",
-    "node-notifier": "^6.0.0"
+    "node-notifier": "^6.0.0",
+    "webpack": "^4.41.6"
   }
 }
