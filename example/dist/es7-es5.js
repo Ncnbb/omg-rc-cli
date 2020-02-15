@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var THIS_IS_CONST = 'const';\nvar this_is_let = 'let';\n\nvar say = function say() {\n  console.log('hi, i\\'m omg-cli');\n};\n\nsay();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZXM3LWVzNS9qcy9lczctZXM1LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2VzNy1lczUvanMvZXM3LWVzNS5qcz9iODI2Il0sInNvdXJjZXNDb250ZW50IjpbImNvbnN0IFRISVNfSVNfQ09OU1QgPSAnY29uc3QnO1xubGV0IHRoaXNfaXNfbGV0ID0gJ2xldCc7XG5cbmNvbnN0IHNheSA9ICgpID0+IHtcbiAgICBjb25zb2xlLmxvZygnaGksIGlcXCdtIG9tZy1jbGknKTtcbn1cblxuc2F5KCk7Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/es7-es5/js/es7-es5.js\n");
+eval("var THIS_IS_CONST = 'const';\nvar this_is_let = 'let';\n\nvar say = function say() {\n  console.log('hi, i\\'m omg-cli');\n};\n\nsay();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZXM3LWVzNS9qcy9lczctZXM1LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2VzNy1lczUvanMvZXM3LWVzNS5qcz82Mzg1Il0sInNvdXJjZXNDb250ZW50IjpbInZhciBUSElTX0lTX0NPTlNUID0gJ2NvbnN0JztcbnZhciB0aGlzX2lzX2xldCA9ICdsZXQnO1xuXG52YXIgc2F5ID0gZnVuY3Rpb24gc2F5KCkge1xuICBjb25zb2xlLmxvZygnaGksIGlcXCdtIG9tZy1jbGknKTtcbn07XG5cbnNheSgpOyJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/es7-es5/js/es7-es5.js\n");
 
 /***/ })
 

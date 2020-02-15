@@ -93,7 +93,14 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var THIS_IS_CONST = 'const';\nvar this_is_let = 'let';\n\nvar say = function say() {\n  console.log('hi, i\\'m omg-cli');\n};\n\nsay();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZXM2LWVzNS9qcy9lczYtZXM1LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2VzNi1lczUvanMvZXM2LWVzNS5qcz80MGQwIl0sInNvdXJjZXNDb250ZW50IjpbImNvbnN0IFRISVNfSVNfQ09OU1QgPSAnY29uc3QnO1xubGV0IHRoaXNfaXNfbGV0ID0gJ2xldCc7XG5cbmNvbnN0IHNheSA9ICgpID0+IHtcbiAgICBjb25zb2xlLmxvZygnaGksIGlcXCdtIG9tZy1jbGknKTtcbn1cblxuc2F5KCk7Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/es6-es5/js/es6-es5.js\n");
+var THIS_IS_CONST = 'const';
+var this_is_let = 'let';
+
+var say = function say() {
+  console.log('hi, i\'m omg-cli');
+};
+
+say();
 
 /***/ })
 
