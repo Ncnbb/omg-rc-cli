@@ -1,6 +1,6 @@
 const program = require( 'commander' );
 const pkg = require( './package.json' );
-const logoOutput = require( './lib/modules/logo/logo' );
+const logoOutput = require( './lib/extension/logo/logo' );
 const createDir = require( './lib/script/create' );
 const warnlog = require( './lib/extension/console/warnlog' );
 const commandDone = require( './lib/extension/console/command_done' );
@@ -25,7 +25,7 @@ program
         } else {
             commandDone( 'err', 'omg create task error!' );
         }
-        process.exit( 1 );
+        process.exit( 0 );
     } );
 
 program
@@ -38,7 +38,7 @@ program
         } else {
             commandDone( 'err', 'omg build task error!' );
         }
-        process.exit( 1 );
+        process.exit( 0 );
     } );
 
 program.parse( process.argv );
