@@ -6,3 +6,5 @@ const say = () => {
 }
 
 say();
+
+class Circle {}

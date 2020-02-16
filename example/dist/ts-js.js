@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/es6-es5/js/es6-es5.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/ts-js/js/ts-js.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/es6-es5/js/es6-es5.js":
-/*!***********************************!*\
-  !*** ./src/es6-es5/js/es6-es5.js ***!
-  \***********************************/
+/***/ "./src/ts-js/js/ts-js.ts":
+/*!*******************************!*\
+  !*** ./src/ts-js/js/ts-js.ts ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar THIS_IS_CONST = 'const';\nvar this_is_let = 'let';\n\nvar say = function say() {\n  console.log('hi, i\\'m omg-cli');\n};\n\nsay();\n\nvar Circle = function Circle() {\n  _classCallCheck(this, Circle);\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZXM2LWVzNS9qcy9lczYtZXM1LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2VzNi1lczUvanMvZXM2LWVzNS5qcz84OWRiIl0sInNvdXJjZXNDb250ZW50IjpbImZ1bmN0aW9uIF9jbGFzc0NhbGxDaGVjayhpbnN0YW5jZSwgQ29uc3RydWN0b3IpIHsgaWYgKCEoaW5zdGFuY2UgaW5zdGFuY2VvZiBDb25zdHJ1Y3RvcikpIHsgdGhyb3cgbmV3IFR5cGVFcnJvcihcIkNhbm5vdCBjYWxsIGEgY2xhc3MgYXMgYSBmdW5jdGlvblwiKTsgfSB9XG5cbnZhciBUSElTX0lTX0NPTlNUID0gJ2NvbnN0JztcbnZhciB0aGlzX2lzX2xldCA9ICdsZXQnO1xuXG52YXIgc2F5ID0gZnVuY3Rpb24gc2F5KCkge1xuICBjb25zb2xlLmxvZygnaGksIGlcXCdtIG9tZy1jbGknKTtcbn07XG5cbnNheSgpO1xuXG52YXIgQ2lyY2xlID0gZnVuY3Rpb24gQ2lyY2xlKCkge1xuICBfY2xhc3NDYWxsQ2hlY2sodGhpcywgQ2lyY2xlKTtcbn07Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/es6-es5/js/es6-es5.js\n");
+eval("var N;\n\n(function (_N) {\n  var V = _N.V = 1;\n})(N || (N = {}));\n\n(function (_N2) {\n  var W = _N2.W = V;\n})(N || (N = {}));\n\nvar x = 0;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvdHMtanMvanMvdHMtanMudHMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvdHMtanMvanMvdHMtanMudHM/NmM1NyJdLCJzb3VyY2VzQ29udGVudCI6WyJuYW1lc3BhY2UgTiB7XG4gICAgZXhwb3J0IGNvbnN0IFYgPSAxO1xufVxubmFtZXNwYWNlIE4ge1xuICAgIGV4cG9ydCBjb25zdCBXID0gVjtcbn1cblxuY29uc3QgeDogbnVtYmVyID0gMDsiXSwibWFwcGluZ3MiOiI7OztBQUNBO0FBREE7QUFDQTs7QUFHQTtBQURBO0FBQ0E7QUFHQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/ts-js/js/ts-js.ts\n");
 
 /***/ })
 
