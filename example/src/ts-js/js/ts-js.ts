@@ -1,4 +1,4 @@
-export default class Alignment {
+export default class Aliagnment {
     list: Array<any>
     constructor () {
         this.list = [];
