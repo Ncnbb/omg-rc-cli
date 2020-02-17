@@ -86,14 +86,26 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "../node_modules/@babel/runtime/helpers/classCallCheck.js":
+/*!****************************************************************!*\
+  !*** ../node_modules/@babel/runtime/helpers/classCallCheck.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _classCallCheck(instance, Constructor) {\n  if (!(instance instanceof Constructor)) {\n    throw new TypeError(\"Cannot call a class as a function\");\n  }\n}\n\nmodule.exports = _classCallCheck;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi4vbm9kZV9tb2R1bGVzL0BiYWJlbC9ydW50aW1lL2hlbHBlcnMvY2xhc3NDYWxsQ2hlY2suanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi4vbm9kZV9tb2R1bGVzL0BiYWJlbC9ydW50aW1lL2hlbHBlcnMvY2xhc3NDYWxsQ2hlY2suanM/NDgzMiJdLCJzb3VyY2VzQ29udGVudCI6WyJmdW5jdGlvbiBfY2xhc3NDYWxsQ2hlY2soaW5zdGFuY2UsIENvbnN0cnVjdG9yKSB7XG4gIGlmICghKGluc3RhbmNlIGluc3RhbmNlb2YgQ29uc3RydWN0b3IpKSB7XG4gICAgdGhyb3cgbmV3IFR5cGVFcnJvcihcIkNhbm5vdCBjYWxsIGEgY2xhc3MgYXMgYSBmdW5jdGlvblwiKTtcbiAgfVxufVxuXG5tb2R1bGUuZXhwb3J0cyA9IF9jbGFzc0NhbGxDaGVjazsiXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///../node_modules/@babel/runtime/helpers/classCallCheck.js\n");
+
+/***/ }),
+
 /***/ "./src/es6-es5/js/es6-es5.js":
 /*!***********************************!*\
   !*** ./src/es6-es5/js/es6-es5.js ***!
   \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar THIS_IS_CONST = 'const';\nvar this_is_let = 'let';\n\nvar say = function say() {\n  console.log('hi, i\\'m omg-cli');\n};\n\nsay();\n\nvar Circle = function Circle() {\n  _classCallCheck(this, Circle);\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZXM2LWVzNS9qcy9lczYtZXM1LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2VzNi1lczUvanMvZXM2LWVzNS5qcz84OWRiIl0sInNvdXJjZXNDb250ZW50IjpbImZ1bmN0aW9uIF9jbGFzc0NhbGxDaGVjayhpbnN0YW5jZSwgQ29uc3RydWN0b3IpIHsgaWYgKCEoaW5zdGFuY2UgaW5zdGFuY2VvZiBDb25zdHJ1Y3RvcikpIHsgdGhyb3cgbmV3IFR5cGVFcnJvcihcIkNhbm5vdCBjYWxsIGEgY2xhc3MgYXMgYSBmdW5jdGlvblwiKTsgfSB9XG5cbnZhciBUSElTX0lTX0NPTlNUID0gJ2NvbnN0JztcbnZhciB0aGlzX2lzX2xldCA9ICdsZXQnO1xuXG52YXIgc2F5ID0gZnVuY3Rpb24gc2F5KCkge1xuICBjb25zb2xlLmxvZygnaGksIGlcXCdtIG9tZy1jbGknKTtcbn07XG5cbnNheSgpO1xuXG52YXIgQ2lyY2xlID0gZnVuY3Rpb24gQ2lyY2xlKCkge1xuICBfY2xhc3NDYWxsQ2hlY2sodGhpcywgQ2lyY2xlKTtcbn07Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/es6-es5/js/es6-es5.js\n");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"../node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);\n\nvar THIS_IS_CONST = 123;\nvar this_is_let = 123;\n\nvar say = function say() {\n  console.log('hi, i\\'m omg-cli');\n};\n\nsay();\n\nvar Circle = function Circle() {\n  _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Circle);\n};\n\nfunction timeout(ms) {\n  return new Promise(function (resolve, reject) {\n    setTimeout(resolve, ms, 'done');\n  });\n}\n\ntimeout(100).then(function (value) {\n  console.log(value);\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZXM2LWVzNS9qcy9lczYtZXM1LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2VzNi1lczUvanMvZXM2LWVzNS5qcz80MGQwIl0sInNvdXJjZXNDb250ZW50IjpbImNvbnN0IFRISVNfSVNfQ09OU1QgPSAxMjM7XG5sZXQgdGhpc19pc19sZXQgPSAxMjM7XG5cbmNvbnN0IHNheSA9ICgpID0+IHtcbiAgICBjb25zb2xlLmxvZygnaGksIGlcXCdtIG9tZy1jbGknKTtcbn1cblxuc2F5KCk7XG5cbmNsYXNzIENpcmNsZSB7fVxuXG5cbmZ1bmN0aW9uIHRpbWVvdXQobXMpIHtcbiAgICByZXR1cm4gbmV3IFByb21pc2UoKHJlc29sdmUsIHJlamVjdCkgPT4ge1xuICAgICAgc2V0VGltZW91dChyZXNvbHZlLCBtcywgJ2RvbmUnKTtcbiAgICB9KTtcbiAgfVxuICBcbiAgdGltZW91dCgxMDApLnRoZW4oKHZhbHVlKSA9PiB7XG4gICAgY29uc29sZS5sb2codmFsdWUpO1xuICB9KTtcbiJdLCJtYXBwaW5ncyI6Ijs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7O0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/es6-es5/js/es6-es5.js\n");
 
 /***/ })
 
