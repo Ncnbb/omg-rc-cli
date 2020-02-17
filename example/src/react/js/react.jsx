@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
+    constructor() {
+        super();
+        this.state = {};
+    }
+    
     render () {
         return (
             <div>
@@ -13,7 +18,7 @@ class App extends React.Component {
 }
 
 function Text () {
-    const [count, setCount] = useState( 0 );
+    const [count] = useState( 0 );
     return ( <p>{count}</p> );
 }
 
