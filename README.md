@@ -25,6 +25,11 @@
 ```Shell
 npm install -g omg-rc-cli
 ```
+### 依赖引入
+```Shell
+npm install -save @babel/core
+```
+
 ## 提供命令
 ```Shell
 # 快速新建项目
@@ -38,5 +43,18 @@ omg build [targetPath]
 
 # 构建指定目录的代码 匹配方式 js/*.(js|jsx)
 omg build [targetPath] [targetDir]
+```
+## 文件夹结构
+创建后，你的项目应如下所示：
+```markdown
+├── cache
+├── dist
+├── src
+│   ├── es6-es5
+│   ├── react
+│   ├── ts-js
+│   └── tsx-js
+├── .eslintrc
+└── tsconfig.json
 ```
 
