@@ -5,16 +5,15 @@
     "node": true,
     "es6": true
   },
-  "plugins": ["react"],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType":"module"
   },
   "rules": {
     "no-console": "off",
-    "comma-dangle": [6, "never"],
     "strict": ["error", "global"],
     "curly": "warn",
+    // "quotes": [1, "double"], // 双引号
     "no-unused-vars": "off" // 只声明没使用的变量不报错
   }
 }
