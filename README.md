@@ -17,9 +17,9 @@
 - [x] React(JSX | TSX)语法转换
 - [x] ESlint
 - [x] TypeScript
-- [] 分包
-- [] 可配置Typescript语法检测
-- [] 可视化脚手架配置界面
+- [ ] 分包
+- [ ] 可配置Typescript语法检测
+- [ ] 可视化脚手架配置界面
 
 ## 起步 && 安装 
 ```Shell
