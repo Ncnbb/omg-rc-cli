@@ -15,7 +15,7 @@
 node v10.x及以上
 
 ### 支持语法
-- [x] ES6
+- [x] ES6 | ES7
 - [x] Scss
 - [x] Svg
 - [x] React(JSX | TSX)语法转换
@@ -31,7 +31,7 @@ npm install -g omg-rc-cli
 ```
 ### 依赖引入
 ```Shell
-npm install -save @babel/core
+npm install -save @babel/runtime-corejs3
 ```
 
 ## 提供命令
@@ -54,11 +54,11 @@ omg build [targetPath] [targetDir]
 ├── cache
 ├── dist
 ├── src
-│   ├── es6-es5
+│   ├── es-es5
 │   ├── react
 │   ├── ts-js
 │   └── tsx-js
-├── .eslintrc
-└── tsconfig.json
+├── .eslintrc // 需要手动配置该文件，[详情参考](http://eslint.cn/docs/user-guide/configuring)。
+└── tsconfig.json  // 需要手动配置该文件，[详情参考](https://typescript.bootcss.com/tsconfig-json.html)。
 ```
 
