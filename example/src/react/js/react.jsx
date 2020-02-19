@@ -1,9 +1,8 @@
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
-class App extends Component<any, any> {
-    render (): JSX.Element {
+class App extends Component {
+    render () {
         return (
             <div>OMG-CLI</div>
         )

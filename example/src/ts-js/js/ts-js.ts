@@ -1,4 +1,4 @@
-export default class Aliagnment {
+class Aliagnment {
     list: Array<any>
     constructor () {
         this.list = [];
@@ -22,3 +22,6 @@ export default class Aliagnment {
         return undefined;
     }
 }
+
+const aliagnment = new Aliagnment();
+console.log(aliagnment);
