@@ -21,7 +21,6 @@ function timeout(ms) {
   });
 
 
-// ES7编译测试
 let count = () => {
   return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -51,3 +50,6 @@ getList().then(res => {
   console.timeEnd('start')
   console.log(err)
 })
+
+const getEntry = Object.entries({[Symbol()]:1, two: 2});
+const getAssign = Object.assign({}, entry)
