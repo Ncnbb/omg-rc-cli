@@ -5,9 +5,11 @@
     "node": true,
     "es6": true
   },
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
-    "sourceType":"module"
+    "sourceType":"module",
+    "allowImportExportEverywhere": true
   },
   "rules": {
     "no-console": "off",

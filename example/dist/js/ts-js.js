@@ -77,23 +77,50 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/dist/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./example/src/ts-js/js/ts-js.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/ts-js/js/ts-js.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./example/src/ts-js/js/ts-js.ts":
-/*!***************************************!*\
-  !*** ./example/src/ts-js/js/ts-js.ts ***!
-  \***************************************/
+/***/ "./src/ts-js/js/ts-js.ts":
+/*!*******************************!*\
+  !*** ./src/ts-js/js/ts-js.ts ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: Unexpected token (2:8)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n| class Aliagnment {\n>     list: Array<any>\n|     constructor () {\n|         this.list = [];");
+class Aliagnment {
+    constructor() {
+        this.list = [];
+    }
+    save(data) {
+        this.list.push(data);
+    }
+    check() {
+        return this.list;
+    }
+    get(index) {
+        if (index === 'first') {
+            return this.list.shift();
+        }
+        else if (index === 'last') {
+            return this.list.pop();
+        }
+        else if (this.list[index]) {
+            const result = this.list[index];
+            this.list.splice(index, 1);
+            return result;
+        }
+        return undefined;
+    }
+}
+const aliagnment = new Aliagnment();
+console.log(aliagnment);
+
 
 /***/ })
 

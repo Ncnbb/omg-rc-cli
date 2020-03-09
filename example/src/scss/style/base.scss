@@ -1,0 +1,9 @@
+$sub: #F40256;
+$sub_lh: rgb(19, 12, 14);
+$sub_dk: #CC0033;
+
+//设置边框圆角
+@mixin borderRadius($borderRadius:0) {
+    border-radius: $borderRadius;
+    -webkit-border-radius: $borderRadius;
+}

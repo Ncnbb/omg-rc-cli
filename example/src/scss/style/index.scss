@@ -1,0 +1,22 @@
+@import './base.scss';
+
+h1 {
+    color: $sub;
+    @include borderRadius();
+}
+
+.test {
+    transform: translate(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+::placeholder {
+    color: gray;
+  }
+
+@media (min-resolution: 2dppx) {
+    .test {
+        transform: translate(200%);
+    }
+}
