@@ -275,58 +275,89 @@
 // console.log( quickSort( [].concat( arr ) ) );
 
 
-let obj = {
-  num: 0,
-  str: '',
-  boolean: true,
-  unf: undefined,
-  nul: null,
-  obj: {
-    name: '我是一个对象',
-    id: 1,
-    qwe: {
-      a: 1
-    }
-  },
-  arr: [0, 1, 2, { b: 2 }],
-  date: new Date( 0 ),
-  reg: /我是一个正则/ig,
-  [Symbol( '1' )]: 1,
-  [Symbol( '2' )]: 2,
-  func () {
-    console.log( 123 )
-  }
-};
+// let obj = {
+//   num: 0,
+//   str: '',
+//   boolean: true,
+//   unf: undefined,
+//   nul: null,
+//   obj: {
+//     name: '我是一个对象',
+//     id: 1,
+//     qwe: {
+//       a: 1
+//     }
+//   },
+//   arr: [0, 1, 2, { b: 2 }],
+//   date: new Date( 0 ),
+//   reg: /我是一个正则/ig,
+//   [Symbol( '1' )]: 1,
+//   [Symbol( '2' )]: 2,
+//   func () {
+//     console.log( 123 )
+//   }
+// };
 
-function deepClone ( obj, map = {} ) {
-  for ( let item in obj ) {
-    const curr = obj[item];
-    if ( Object.prototype.toString.call( curr ) == '[object Date]' ) {
-      map[item] = new Date( curr );
-    } else if ( Object.prototype.toString.call( curr ) == '[object Null]' ) {
-      map[item] = null;
-    } else if ( Object.prototype.toString.call( curr ) == '[object Array]' ) {
-      map[item] = [].concat( curr );
-    } else if ( Object.prototype.toString.call( curr ) == '[object RegExp]' ) {
-      map[item] = new RegExp(curr);
-    } else if ( Object.prototype.toString.call( curr ) == '[object Object]' ) {
-      map[item] = {};
-      deepClone(obj[item], map[item]);
-    } else {
-      map[item] = curr;
-    }
-  }
+// function deepClone ( obj, map = {} ) {
+//   for ( let item in obj ) {
+//     const curr = obj[item];
+//     if ( Object.prototype.toString.call( curr ) == '[object Date]' ) {
+//       map[item] = new Date( curr );
+//     } else if ( Object.prototype.toString.call( curr ) == '[object Null]' ) {
+//       map[item] = null;
+//     } else if ( Object.prototype.toString.call( curr ) == '[object Array]' ) {
+//       map[item] = [].concat( curr );
+//     } else if ( Object.prototype.toString.call( curr ) == '[object RegExp]' ) {
+//       map[item] = new RegExp(curr);
+//     } else if ( Object.prototype.toString.call( curr ) == '[object Object]' ) {
+//       map[item] = {};
+//       deepClone(obj[item], map[item]);
+//     } else {
+//       map[item] = curr;
+//     }
+//   }
 
-  const symbols = Object.getOwnPropertySymbols(obj);
-  for ( let i = 0; i < symbols.length; i++ ) {
-    map[symbols[i]] = obj[symbols[i]];
-  }
+//   const symbols = Object.getOwnPropertySymbols(obj);
+//   for ( let i = 0; i < symbols.length; i++ ) {
+//     map[symbols[i]] = obj[symbols[i]];
+//   }
 
-  return map;
-}
+//   return map;
+// }
 
-const newObj = deepClone( obj );
+// const newObj = deepClone( obj );
 
-for ( let item in newObj ) {
-  console.log( item, '->', newObj[item] === obj[item] )
-}
+// for ( let item in newObj ) {
+//   console.log( item, '->', newObj[item] === obj[item] )
+// }
+
+
+console.log('1');
+setTimeout(function () { 
+  console.log(2);
+  new Promise((resolve) => {
+    console.log(3)
+    resolve()
+  }).then(() => {
+    console.log(4)
+  })
+ },1)
+
+ new Promise((resolve) => {
+  console.log(5)
+  resolve()
+}).then(() => {
+  console.log(6)
+})
+
+setTimeout(() => {
+  console.log(7)
+  new Promise((resolve) => {
+    console.log(8)
+    resolve()
+  }).then(() => {
+    console.log(9)
+  })
+},2)
+
+// 1 5 6 2 3 4 7 8 9

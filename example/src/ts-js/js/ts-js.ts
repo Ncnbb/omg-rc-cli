@@ -1,4 +1,4 @@
-class Aliagnment {
+class Test {
     list: Array<any>
     constructor () {
         this.list = [];
@@ -22,6 +22,3 @@ class Aliagnment {
         return undefined;
     }
 }
-
-const aliagnment = new Aliagnment();
-console.log(aliagnment);

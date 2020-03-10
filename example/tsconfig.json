@@ -10,7 +10,7 @@
     "noEmitOnError": false, //报错不生成代码
     "allowSyntheticDefaultImports": true, //允许从没有设置默认导出的模块中默认导入。这并不影响代码的显示，仅为了类型检查。
     "target": "es6",
-    "outDir": "dist/js", // 输出指定目录
+    "outDir": "dist", // 输出指定目录
     "sourceMap": true,
     "declarationDir": "dist/ts"
   },

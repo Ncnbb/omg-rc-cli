@@ -2,9 +2,10 @@ const program = require( 'commander' );
 const pkg = require( './package.json' );
 const logoOutput = require( './lib/extension/logo/logo' );
 const createDir = require( './lib/script/create' );
+const initProject = require( './lib/script/initProject' );
 const warnlog = require( './lib/extension/console/warnlog' );
 const commandDone = require( './lib/extension/console/command_done' );
-const build = require('./lib/script/build');
+const build = require( './lib/script/build' );
 
 program
     .version( pkg.version, '-v, --version' )
@@ -14,6 +15,19 @@ program
         warnlog( 'Your current command does not exist, please read the documentation carefully!' );
         warnlog( 'You can enter the following command：omg --help' );
     } )
+
+program
+    .command( 'init <projectName>' )
+    .description( 'init your project' )
+    .action( async (projectName) => {
+        const result = await initProject(projectName);
+        if ( result ) {
+            commandDone( 'ok', 'omg init task done!' );
+        } else {
+            commandDone( 'err', 'omg init task error!' );
+        }
+        process.exit( 0 );
+    } );
 
 program
     .command( 'create <dirPath> <name>' )
@@ -42,6 +56,7 @@ program
     } );
 
 program.parse( process.argv );
+
 // 默认输出
 // if ( !program.args || program.args.length == 0 ) console.log( logoOutput() )
-if ( !process.argv ||  process.argv.length == 2 ) console.log( logoOutput() )
+if ( !process.argv || process.argv.length == 2 ) console.log( logoOutput() )

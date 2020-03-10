@@ -57,5 +57,11 @@
     "url-loader": "3.0.0",
     "webpack": "4.41.6",
     "webpackbar": "4.0.0"
-  }
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {}
 }

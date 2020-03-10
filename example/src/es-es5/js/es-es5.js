@@ -1,3 +1,5 @@
+import console2 from 'root/tool/console';
+
 const THIS_IS_CONST = 123;
 let this_is_let = 123;
 
