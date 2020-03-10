@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    {{#each assets.css}}
+        {{{this}}}
+    {{/each}}
+</head>
+<body>
+    {{> ./sub.hbs}}
+    <div id="root"></div>
+    {{#each assets.js}}
+        {{{this}}}
+    {{/each}}
+</body>
+</html>
