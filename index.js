@@ -6,6 +6,8 @@ const initProject = require( './lib/script/initProject' );
 const warnlog = require( './lib/extension/console/warnlog' );
 const commandDone = require( './lib/extension/console/command_done' );
 const build = require( './lib/script/build' );
+const watch = require( './lib/script/watch' );
+const publish = require( './lib/script/publish' );
 
 program
     .version( pkg.version, '-v, --version' )
@@ -19,8 +21,8 @@ program
 program
     .command( 'init <projectName>' )
     .description( 'init your project' )
-    .action( async (projectName) => {
-        const result = await initProject(projectName);
+    .action( async ( projectName ) => {
+        const result = await initProject( projectName );
         if ( result ) {
             commandDone( 'ok', 'omg init task done!' );
         } else {
@@ -55,8 +57,33 @@ program
         process.exit( 0 );
     } );
 
-program.parse( process.argv );
+program
+    .command( 'watch [targetPath] [targetDir]' )
+    .description( 'build file, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
+    .action( async ( path, dir ) => {
+        const result = await watch( path, dir );
+        if ( result ) {
+            commandDone( 'ok', 'omg build task done!' );
+        } else {
+            commandDone( 'err', 'omg build task error!' );
+        }
+        process.exit( 0 );
+    } );
 
+program
+    .command( 'publish [targetPath] [targetDir]' )
+    .description( 'publish file, [targetPath] specify publish directory, [targetDir] specified file in dirTarget.' )
+    .action( async ( path, dir ) => {
+        const result = await publish( path, dir );
+        if ( result ) {
+            commandDone( 'ok', 'omg publish task done!' );
+        } else {
+            commandDone( 'err', 'omg publish task error!' );
+        }
+        process.exit( 0 );
+    } );
+
+program.parse( process.argv );
 // 默认输出
 // if ( !program.args || program.args.length == 0 ) console.log( logoOutput() )
 if ( !process.argv || process.argv.length == 2 ) console.log( logoOutput() )

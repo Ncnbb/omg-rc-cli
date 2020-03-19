@@ -12,7 +12,7 @@ order: 3
 omg build [targetPath] [targetDir] // 开发构建
 omg watch [targetPath] [targetDir] // 监听构建
 omg server [targetPath] [targetDir] // 本地服务
-omg publish [targetPath] [targetDir] // 生成构建
+omg publish [targetPath] [targetDir] // 生产构建
 ```
 默认可以传入参数，那么运行目录将会在当前目录下。
 
