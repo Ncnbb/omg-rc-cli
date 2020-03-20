@@ -7,6 +7,7 @@ const warnlog = require( './lib/extension/console/warnlog' );
 const commandDone = require( './lib/extension/console/command_done' );
 const build = require( './lib/script/build' );
 const watch = require( './lib/script/watch' );
+const server = require( './lib/script/server' );
 const publish = require( './lib/script/publish' );
 
 program
@@ -63,9 +64,22 @@ program
     .action( async ( path, dir ) => {
         const result = await watch( path, dir );
         if ( result ) {
-            commandDone( 'ok', 'omg build task done!' );
+            commandDone( 'ok', 'omg watch task end!' );
         } else {
-            commandDone( 'err', 'omg build task error!' );
+            commandDone( 'err', 'omg watch task error!' );
+        }
+        process.exit( 0 );
+    } );
+
+program
+    .command( 'server [targetPath] [targetDir]' )
+    .description( 'dev server, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
+    .action( async ( path, dir ) => {
+        const result = await server( path, dir );
+        if ( result ) {
+            commandDone( 'ok', 'omg server task end!' );
+        } else {
+            commandDone( 'err', 'omg server task error!' );
         }
         process.exit( 0 );
     } );
