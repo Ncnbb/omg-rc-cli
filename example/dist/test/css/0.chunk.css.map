@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/lazy-load-example/style/sub.scss"],"names":[],"mappings":"AAAA,GAAG","file":"test/css/0.chunk.css","sourcesContent":["h1{color:red}\n"],"sourceRoot":""}

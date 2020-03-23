@@ -461,3 +461,17 @@ OMG默认使用[terser-webpack-plugin]('https://github.com/webpack-contrib/terse
     }
 }
 ```
+
+### 自定输出目录名
+
+默认情况下，如果我们没有指定`targetDir`，那么将会默认输出到dist目录下的js,html目录中，如果我们指定了`targetDir`，那么将会输出到dist中与`targetDir`名字同名的目录中。
+
+当有一种情况是如果我们需要指定一个名字去进行特殊输出，例如：当前指定`targetDir`为`test1`的目录，但是我们想把文件输出到`test2`的目录中，那么就可以再omg.config.js中配置`output.dirName`属性进行指定。
+
+
+```json
+output: {
+    ...
+    dirName: 'test2'
+}
+```

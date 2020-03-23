@@ -1,7 +1,6 @@
 const path = require( 'path' );
 const axios = require( 'axios' );
 async function readHtml ( name ) {
-    console.log( name );
     const res = await axios( {
         url: `http://127.0.0.1:9527/html/${name}.html`,
         method: 'get',
@@ -11,13 +10,13 @@ async function readHtml ( name ) {
 }
 
 module.exports = {
-    // output: {
-    //     path: path.join(__dirname, 'dist'),
-    //     filename: `js/[name].js`,
-    //     chunkFilename: `js/[name].chunk.js`,
-    //     publicPath: `../`,
-    //     // crossOriginLoading: 'anonymous'
-    // },
+    output: {
+        // path: path.join(__dirname, 'dist'),
+        // filename: `js/[name].js`,
+        // chunkFilename: `js/[name].chunk.js`,
+        // publicPath: `../`,
+        // crossOriginLoading: 'anonymous',
+    },
     browserslist: [ // 浏览器
         'Chrome >= 45',
         'last 2 Firefox versions',
@@ -39,6 +38,10 @@ module.exports = {
                 res.send(html);
             } );
         }
-
+    },
+    loaderOpt: {
+        scss: (rules) => {
+            console.log(rules);
+        }
     }
 }
