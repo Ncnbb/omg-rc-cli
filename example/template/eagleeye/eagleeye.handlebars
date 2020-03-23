@@ -1,0 +1,44 @@
+{{!-- 鹰眼埋点 --}}
+<!-- ignoreStart -->
+{{{inline.eaentry}}}
+<script>
+    ea('config', 'project', 'zzc-m');
+    ea('config', 'blacklistUrls', [/(zuzuche\.net)|(\d+\.\d+\.\d+\.\d+)/, /(\d+\.)+\d(:\d+)/]);
+    ea('config', {
+        project: 'zzc-m',
+        dsn: '1d176a6563504365abfe47cf726dfcdc@8',
+        environment: 'prod',
+        cdn: ['https://imgcdn50.zuzuche.com/assets/analytics/eagleeyejssdk/images/eagleeye_car.jpg'],
+        beforeSend: function (data) {
+
+        }
+    });
+</script>
+<!-- ignoreEnd -->
+<script>
+    /**
+    *  大数据埋点 统一方法
+    *  
+    **/
+    window.initUserTrack = function(options){
+        if(!options){
+            console.error('埋点初始化错误')
+            return null;
+        } 
+        var objType = options.obj_type;
+        var cateGory = options.category
+        return function(opt,isNotEa){
+            var isNotEa = isNotEa == undefined ? true : isNotEa;
+            if(!opt) return null;
+            try{
+                window.sa && window.sa.track(opt.action=='jump'?'click':opt.action, Object.assign(opt,{
+                    obj_type: objType,
+                }))
+                 window.ea && isNotEa && window.ea('log','feLink',Object.assign( opt,{ category: cateGory,action: opt.action=='click'?'event':opt.action}));
+                 window.TongJi && window.TongJi.addPv(opt.action + ':' + ( opt.category ? opt.category : cateGory ) + '/' + opt.label);
+            }catch(err){
+                console.error('userTrackError:',opt.label,err)
+            }
+        }
+    }
+</script>

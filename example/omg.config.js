@@ -10,12 +10,16 @@ async function readHtml ( name ) {
 }
 
 module.exports = {
+    entry: {
+        eaentry: '@eagleeye-jssdk/loader/zuzuche.js?__inline',
+    },
     output: {
         // path: path.join(__dirname, 'dist'),
         // filename: `js/[name].js`,
         // chunkFilename: `js/[name].chunk.js`,
         // publicPath: `../`,
         // crossOriginLoading: 'anonymous',
+        dirName: 'test1'
     },
     browserslist: [ // 浏览器
         'Chrome >= 45',

@@ -53,7 +53,7 @@
     "node-notifier": "6.0.0",
     "node-object-hash": "^2.0.0",
     "node-sass": "4.13.1",
-    "omg-inject-html-webpack-plugin": "1.2.0",
+    "omg-inject-html-webpack-plugin": "1.2.1",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pascalcase": "^1.0.0",
     "postcss-loader": "3.0.0",

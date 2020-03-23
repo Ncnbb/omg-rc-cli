@@ -34956,7 +34956,6 @@ react_dom__WEBPACK_IMPORTED_MODULE_6___default.a.render(react__WEBPACK_IMPORTED_
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"icon-home":"icon-home--397ed","icon-home2":"icon-home2--1ux5j","icon-home3":"icon-home3--RHNqJ","test":"test--1XTWm"};
 
 /***/ })
 

@@ -34970,7 +34970,6 @@ react_dom__WEBPACK_IMPORTED_MODULE_7___default.a.render(react__WEBPACK_IMPORTED_
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"test":"test--2dvxq","logo":"logo--k86iJ","logo2":"logo2--2Puf5","logo3":"logo3--1Xo22","logo4":"logo4--21i5D","logo5":"logo5--3kA-x"};
 
 /***/ })
 

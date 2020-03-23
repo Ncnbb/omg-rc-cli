@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/css-example/style/index.module.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA,C","file":"test1/css/css-example.css","sourcesContent":[".class-name1 {\n    font-size: 14px;\n}\n.class-name2 {\n    font-size: 14px;\n}"],"sourceRoot":""}
