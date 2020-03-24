@@ -19,7 +19,7 @@ module.exports = {
         // chunkFilename: `js/[name].chunk.js`,
         // publicPath: `../`,
         // crossOriginLoading: 'anonymous',
-        dirName: 'test1'
+        // dirName: 'test1'
     },
     browserslist: [ // 浏览器
         'Chrome >= 45',

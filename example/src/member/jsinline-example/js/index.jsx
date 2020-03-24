@@ -8,7 +8,8 @@ class App extends Component {
         return (
             <div>
                 <h1>OMG-CLI</h1>
-                <Button>123</Button>
+                <Button>111143334</Button>
+                <h1>123123123</h1>
                 <Sub/>
             </div>
         )

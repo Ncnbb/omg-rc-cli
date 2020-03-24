@@ -301,6 +301,17 @@ module.exports = path.Object.setPrototypeOf;
 
 /***/ }),
 
+/***/ "../node_modules/core-js-pure/es/reflect/construct.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__("../node_modules/core-js-pure/modules/es.reflect.construct.js");
+var path = __webpack_require__("../node_modules/core-js-pure/internals/path.js");
+
+module.exports = path.Reflect.construct;
+
+
+/***/ }),
+
 /***/ "../node_modules/core-js-pure/es/symbol/index.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -377,6 +388,16 @@ module.exports = parent;
 /***/ (function(module, exports, __webpack_require__) {
 
 var parent = __webpack_require__("../node_modules/core-js-pure/es/object/set-prototype-of.js");
+
+module.exports = parent;
+
+
+/***/ }),
+
+/***/ "../node_modules/core-js-pure/features/reflect/construct.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+var parent = __webpack_require__("../node_modules/core-js-pure/es/reflect/construct.js");
 
 module.exports = parent;
 
@@ -1142,6 +1163,41 @@ module.exports = function (fn, that, length) {
   return function (/* ...args */) {
     return fn.apply(that, arguments);
   };
+};
+
+
+/***/ }),
+
+/***/ "../node_modules/core-js-pure/internals/function-bind.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var aFunction = __webpack_require__("../node_modules/core-js-pure/internals/a-function.js");
+var isObject = __webpack_require__("../node_modules/core-js-pure/internals/is-object.js");
+
+var slice = [].slice;
+var factories = {};
+
+var construct = function (C, argsLength, args) {
+  if (!(argsLength in factories)) {
+    for (var list = [], i = 0; i < argsLength; i++) list[i] = 'a[' + i + ']';
+    // eslint-disable-next-line no-new-func
+    factories[argsLength] = Function('C,a', 'return new C(' + list.join(',') + ')');
+  } return factories[argsLength](C, args);
+};
+
+// `Function.prototype.bind` method implementation
+// https://tc39.github.io/ecma262/#sec-function.prototype.bind
+module.exports = Function.bind || function bind(that /* , ...args */) {
+  var fn = aFunction(this);
+  var partArgs = slice.call(arguments, 1);
+  var boundFunction = function bound(/* args... */) {
+    var args = partArgs.concat(slice.call(arguments));
+    return this instanceof boundFunction ? construct(fn, args.length, args) : fn.apply(that, args);
+  };
+  if (isObject(fn.prototype)) boundFunction.prototype = fn.prototype;
+  return boundFunction;
 };
 
 
@@ -2393,6 +2449,64 @@ $({ target: 'Object', stat: true }, {
 
 /***/ }),
 
+/***/ "../node_modules/core-js-pure/modules/es.reflect.construct.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+var $ = __webpack_require__("../node_modules/core-js-pure/internals/export.js");
+var getBuiltIn = __webpack_require__("../node_modules/core-js-pure/internals/get-built-in.js");
+var aFunction = __webpack_require__("../node_modules/core-js-pure/internals/a-function.js");
+var anObject = __webpack_require__("../node_modules/core-js-pure/internals/an-object.js");
+var isObject = __webpack_require__("../node_modules/core-js-pure/internals/is-object.js");
+var create = __webpack_require__("../node_modules/core-js-pure/internals/object-create.js");
+var bind = __webpack_require__("../node_modules/core-js-pure/internals/function-bind.js");
+var fails = __webpack_require__("../node_modules/core-js-pure/internals/fails.js");
+
+var nativeConstruct = getBuiltIn('Reflect', 'construct');
+
+// `Reflect.construct` method
+// https://tc39.github.io/ecma262/#sec-reflect.construct
+// MS Edge supports only 2 arguments and argumentsList argument is optional
+// FF Nightly sets third argument as `new.target`, but does not create `this` from it
+var NEW_TARGET_BUG = fails(function () {
+  function F() { /* empty */ }
+  return !(nativeConstruct(function () { /* empty */ }, [], F) instanceof F);
+});
+var ARGS_BUG = !fails(function () {
+  nativeConstruct(function () { /* empty */ });
+});
+var FORCED = NEW_TARGET_BUG || ARGS_BUG;
+
+$({ target: 'Reflect', stat: true, forced: FORCED, sham: FORCED }, {
+  construct: function construct(Target, args /* , newTarget */) {
+    aFunction(Target);
+    anObject(args);
+    var newTarget = arguments.length < 3 ? Target : aFunction(arguments[2]);
+    if (ARGS_BUG && !NEW_TARGET_BUG) return nativeConstruct(Target, args, newTarget);
+    if (Target == newTarget) {
+      // w/o altered newTarget, optimization for 0-4 arguments
+      switch (args.length) {
+        case 0: return new Target();
+        case 1: return new Target(args[0]);
+        case 2: return new Target(args[0], args[1]);
+        case 3: return new Target(args[0], args[1], args[2]);
+        case 4: return new Target(args[0], args[1], args[2], args[3]);
+      }
+      // w/o altered newTarget, lot of arguments case
+      var $args = [null];
+      $args.push.apply($args, args);
+      return new (bind.apply(Target, $args))();
+    }
+    // with altered newTarget, not support built-in constructors
+    var proto = newTarget.prototype;
+    var instance = create(isObject(proto) ? proto : Object.prototype);
+    var result = Function.apply.call(Target, instance, args);
+    return isObject(result) ? result : instance;
+  }
+});
+
+
+/***/ }),
+
 /***/ "../node_modules/core-js-pure/modules/es.string.iterator.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3149,6 +3263,13 @@ module.exports = __webpack_require__("../node_modules/core-js-pure/features/obje
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs3/core-js/reflect/construct.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("../node_modules/core-js-pure/features/reflect/construct.js");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs3/core-js/symbol.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3222,6 +3343,39 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs3/helpers/esm/createSuper.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _createSuper; });
+/* harmony import */ var _core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/core-js/reflect/construct.js");
+/* harmony import */ var _core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _getPrototypeOf__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _isNativeReflectConstruct__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/helpers/esm/isNativeReflectConstruct.js");
+/* harmony import */ var _possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/helpers/esm/possibleConstructorReturn.js");
+
+
+
+
+function _createSuper(Derived) {
+  return function () {
+    var Super = Object(_getPrototypeOf__WEBPACK_IMPORTED_MODULE_1__["default"])(Derived),
+        result;
+
+    if (Object(_isNativeReflectConstruct__WEBPACK_IMPORTED_MODULE_2__["default"])()) {
+      var NewTarget = Object(_getPrototypeOf__WEBPACK_IMPORTED_MODULE_1__["default"])(this).constructor;
+      result = _core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default()(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return Object(_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, result);
+  };
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs3/helpers/esm/getPrototypeOf.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3267,6 +3421,30 @@ function _inherits(subClass, superClass) {
     }
   });
   if (superClass) Object(_setPrototypeOf__WEBPACK_IMPORTED_MODULE_1__["default"])(subClass, superClass);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs3/helpers/esm/isNativeReflectConstruct.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _isNativeReflectConstruct; });
+/* harmony import */ var _core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/core-js/reflect/construct.js");
+/* harmony import */ var _core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0__);
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default.a) return false;
+  if (_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default.a.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default()(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 /***/ }),
@@ -35033,12 +35211,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return App; });
 /* harmony import */ var _Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/helpers/esm/classCallCheck.js");
 /* harmony import */ var _Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/helpers/esm/createClass.js");
-/* harmony import */ var _Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-
+/* harmony import */ var _Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/helpers/esm/createSuper.js");
+/* harmony import */ var _Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./node_modules/@babel/runtime-corejs3/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -35047,14 +35223,16 @@ var _jsxFileName = "/Users/lamho/Desktop/\u524D\u7AEF\u4EE3\u7801/Ncnbb/omg-rc-c
 
 
 var App = /*#__PURE__*/function (_React$Component) {
-  Object(_Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(App, _React$Component);
+  Object(_Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(App, _React$Component);
+
+  var _super = Object(_Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_2__["default"])(App);
 
   function App(props) {
     var _this;
 
     Object(_Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, App);
 
-    _this = Object(_Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_Users_lamho_Desktop_Ncnbb_omg_rc_cli_example_node_modules_babel_runtime_corejs3_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(App).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       SubComponent: null
     };
@@ -35076,30 +35254,33 @@ var App = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var SubComponent = this.state.SubComponent;
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+        __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+          lineNumber: 22,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h1", {
+        __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }, "1231231"), SubComponent && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(SubComponent, {
+          lineNumber: 23,
+          columnNumber: 17
+        }
+      }, "1231231"), SubComponent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(SubComponent, {
+        __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
-        },
-        __self: this
+          lineNumber: 24,
+          columnNumber: 34
+        }
       }));
     }
   }]);
 
   return App;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
 
 
 
@@ -35119,12 +35300,13 @@ var _jsxFileName = "/Users/lamho/Desktop/\u524D\u7AEF\u4EE3\u7801/Ncnbb/omg-rc-c
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 6
-  },
-  __self: undefined
+    lineNumber: 6,
+    columnNumber: 5
+  }
 }), document.getElementById('root'));
 
 /***/ })

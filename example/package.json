@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/runtime-corejs3": "7.8.4",
+    "@babel/runtime-corejs3": "^7.9.2",
     "@eagleeye-jssdk/loader": "^1.6.0",
     "@types/react": "16.9.20",
     "@types/react-dom": "16.9.5",

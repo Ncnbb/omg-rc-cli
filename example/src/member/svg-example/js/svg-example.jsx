@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 import '../style/index.scss';
 import edit from '../svg/edit.svg?__sprite';
 import Icon from '../svg/ic_free.svg';
-
+console.log(edit)
+console.log(Icon)
 class App extends Component {
     render () {
         return (
