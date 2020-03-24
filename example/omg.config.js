@@ -43,9 +43,10 @@ module.exports = {
             } );
         }
     },
-    loaderOpt: {
-        scss: (rules) => {
-            console.log(rules);
-        }
-    }
+    // loaderOpt: {
+    //     scss: (rules) => {
+    //         console.log(rules);
+    //     }
+    // },
+    smp: true
 }

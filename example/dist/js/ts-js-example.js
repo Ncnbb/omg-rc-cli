@@ -89,34 +89,8 @@
 /***/ "./src/ts-js-example/js/ts-js-example.ts":
 /***/ (function(module, exports) {
 
-class Test {
-    constructor() {
-        this.list = [];
-    }
-    save(data) {
-        this.list.push(data);
-    }
-    check() {
-        return this.list;
-    }
-    get(index) {
-        if (index === 'first') {
-            return this.list.shift();
-        }
-        else if (index === 'last') {
-            return this.list.pop();
-        }
-        else if (this.list[index]) {
-            const result = this.list[index];
-            this.list.splice(index, 1);
-            return result;
-        }
-        return undefined;
-    }
-}
-
+eval("class Test {\n    constructor() {\n        this.list = [];\n    }\n    save(data) {\n        this.list.push(data);\n    }\n    check() {\n        return this.list;\n    }\n    get(index) {\n        if (index === 'first') {\n            return this.list.shift();\n        }\n        else if (index === 'last') {\n            return this.list.pop();\n        }\n        else if (this.list[index]) {\n            const result = this.list[index];\n            this.list.splice(index, 1);\n            return result;\n        }\n        return undefined;\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvdHMtanMtZXhhbXBsZS9qcy90cy1qcy1leGFtcGxlLnRzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL3RzLWpzLWV4YW1wbGUvanMvdHMtanMtZXhhbXBsZS50cz8wNTY1Il0sInNvdXJjZXNDb250ZW50IjpbImNsYXNzIFRlc3Qge1xuICAgIGxpc3Q6IEFycmF5PGFueT5cbiAgICBjb25zdHJ1Y3RvciAoKSB7XG4gICAgICAgIHRoaXMubGlzdCA9IFtdO1xuICAgIH1cbiAgICBzYXZlICggZGF0YTogYW55ICk6IHZvaWQge1xuICAgICAgICB0aGlzLmxpc3QucHVzaCggZGF0YSApO1xuICAgIH1cbiAgICBjaGVjayAoKTogYW55IHtcbiAgICAgICAgcmV0dXJuIHRoaXMubGlzdDtcbiAgICB9XG4gICAgZ2V0ICggaW5kZXg6IGFueSApOiB2b2lkIHtcbiAgICAgICAgaWYgKCBpbmRleCA9PT0gJ2ZpcnN0JyApIHtcbiAgICAgICAgICAgIHJldHVybiB0aGlzLmxpc3Quc2hpZnQoKTtcbiAgICAgICAgfSBlbHNlIGlmICggaW5kZXggPT09ICdsYXN0JyApIHtcbiAgICAgICAgICAgIHJldHVybiB0aGlzLmxpc3QucG9wKCk7XG4gICAgICAgIH0gZWxzZSBpZiAoICB0aGlzLmxpc3RbaW5kZXhdICApIHtcbiAgICAgICAgICAgIGNvbnN0IHJlc3VsdCA9IHRoaXMubGlzdFtpbmRleF07XG4gICAgICAgICAgICB0aGlzLmxpc3Quc3BsaWNlKCBpbmRleCwgMSApO1xuICAgICAgICAgICAgcmV0dXJuIHJlc3VsdDtcbiAgICAgICAgfVxuICAgICAgICByZXR1cm4gdW5kZWZpbmVkO1xuICAgIH1cbn1cbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/ts-js-example/js/ts-js-example.ts\n");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=ts-js-example.js.map
