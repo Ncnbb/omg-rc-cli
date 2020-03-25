@@ -1,4 +1,12 @@
-<!doctype html><html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body><div id="root">444444</div><style>.loading_cc {
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+    <div id="root">444444</div>
+     <style>
+         .loading_cc {
              background-color: #FFFFFF;
              border-radius: .1rem;
              display: inline-block;
@@ -126,7 +134,11 @@
      
          .loading_cbox .cover_box {
              background: rgba(0, 0, 0, 0.7);
-         }</style><script>var imageList = [];
+         }
+     </style>
+     <script>
+     
+         var imageList = [];
          var imageElemList = [];
          var isReactDidMount = false;
      
@@ -151,7 +163,31 @@
                  tjLoadingImageAllLoading();
              }
              imageElemList[i].src = imageList[i];
-         }</script><div id="loading_box" class="loading_cbox J-searchLoading"><div id="loading_icon_box" class="loading_c"><div class="loading_cc"><p id="loading_str">{region_driver_str}</p><div class="loading-list"><b></b> <span>{name}</span></div><div class="loading-logo"><b style="background: url({dealer_pic_big}); background-size: 100% 100%;"></b><b>1000+</b></div></div></div><div class="cover_box"></div></div><script>// 假loading
+         }
+     
+     </script>
+     <div id="loading_box" class="loading_cbox J-searchLoading">
+         <div id="loading_icon_box" class="loading_c">
+             <div class="loading_cc">
+                 <p id="loading_str">{region_driver_str}</p>
+                 <!-- BEGIN loading_tips -->
+                 <div class="loading-list">
+                     <b></b>
+                     <span>{name}</span>
+                 </div>
+                 <!-- END -->
+                 <div class="loading-logo">
+                     <!-- BEGIN region_dealer -->
+                     <b style="background: url({dealer_pic_big}); background-size: 100% 100%;"></b>
+                     <!-- END -->
+                     <b>1000+</b>
+                 </div>
+             </div>
+         </div>
+         <div class="cover_box"></div>
+     </div>
+     <script>
+         // 假loading
          window.runLoading = function () {
              document.getElementById( 'loading_box' ).style.display = 'block';
              var load = document.getElementsByClassName( 'loading-list' );
@@ -197,4 +233,6 @@
             } catch(err) {
      
             }
-         }</script><script src="/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/dist/js/handlebars-example-1d9aa252.js"></script></body></html>
+         }
+     </script><script src="/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/dist/js/react-runtime.chunk.js"></script><script src="/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/dist/js/vender~handlebars-example.chunk.js"></script><script src="/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/dist/js/handlebars-example.js"></script></body>
+</html>

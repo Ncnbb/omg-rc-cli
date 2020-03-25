@@ -43,6 +43,15 @@ module.exports = {
             } );
         }
     },
+    resolve: {
+        alias: {
+            '@': path.resolve( __dirname, './src/book/' ),
+            '^': path.resolve( __dirname, './src/otherService/' ),
+            '@@': path.resolve( __dirname, './src/' ),
+            '@rental': path.resolve( __dirname, './src/mainRental' ),
+            '@rentalAfter': path.resolve( __dirname, './src/rentalAfter' ),
+        }
+    },
     // loaderOpt: {
     //     scss: (rules) => {
     //         console.log(rules);
