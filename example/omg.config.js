@@ -45,11 +45,11 @@ module.exports = {
     },
     resolve: {
         alias: {
-            '@': path.resolve( __dirname, './src/book/' ),
-            '^': path.resolve( __dirname, './src/otherService/' ),
-            '@@': path.resolve( __dirname, './src/' ),
-            '@rental': path.resolve( __dirname, './src/mainRental' ),
-            '@rentalAfter': path.resolve( __dirname, './src/rentalAfter' ),
+            // '@': path.resolve( __dirname, './src/book/' ),
+            // '^': path.resolve( __dirname, './src/otherService/' ),
+            // '@@': path.resolve( __dirname, './src/' ),
+            // '@rental': path.resolve( __dirname, './src/mainRental' ),
+            // '@rentalAfter': path.resolve( __dirname, './src/rentalAfter' ),
         }
     },
     // loaderOpt: {
@@ -57,5 +57,5 @@ module.exports = {
     //         console.log(rules);
     //     }
     // },
-    smp: true
+    // smp: true
 }
