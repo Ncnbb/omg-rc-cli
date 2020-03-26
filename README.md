@@ -2,9 +2,12 @@
 
 # omg-rc-cli
 ## 介绍
-> omg-rc-cli 是一套可以快速新建React项目的脚手架，基于webpack二次开发，进行了大量预设配置和功能扩展。
 
-### 特性
+omg-rc-cli 是一套可以快速新建React项目的脚手架，基于webpack二次开发，进行了大量预设配置和功能扩展。
+
+每次我们编写新项目时，都会为配置webpack而烦恼，而且针对不同的目录结构，也会有不同的配置方式，大大影响我们的开发效率，omg-rc-cli就是为了解决这一系列问题而开发的一套React脚手架，能帮助团队能快速的投入开发，并且互相遵从一些目录结构的规范进行页面开发。
+
+## 特性
 - 基于webpack构建，并带有合理的默认配置。
 - 集成了前端生态中较好的构建插件。
 - 是一个可全局安装的npm包。
@@ -12,26 +15,27 @@
 
 ### 使用环境
 
-node v10.x及以上
+node v8.9及以上
 
-### 支持语法
+## 功能
 - [x] ES6 | ES7
-- [x] Scss
+- [x] SCSS | CSS
 - [x] Svg
 - [x] React(JSX | TSX)语法转换
 - [x] ESlint
 - [x] TypeScript
-- [ ] 分包
-- [ ] 可配置Typescript语法检测
-- [ ] 可视化脚手架配置界面
+- [x] handlebars
+- [x] html资源自动注入
+- [x] 自动资源切割
+- [x] 图片智能优化，支持使用（png,jpg,jpeg,webp,gif） 
+- [x] babel编译缓存
+- [x] 压缩缓存
+- [x] webpack资源依赖高速缓存
+- [x] 多线程编译压缩
 
 ## 起步 && 安装 
 ```Shell
 npm install -g omg-rc-cli
-```
-### 依赖引入
-```Shell
-npm install -save @babel/runtime-corejs3
 ```
 
 ## 提供命令
@@ -48,17 +52,16 @@ omg build [targetPath]
 # 构建指定目录的代码 匹配方式 js/*.(js|jsx)
 omg build [targetPath] [targetDir]
 ```
-## 文件夹结构
-创建后，你的项目应如下所示：
-```markdown
-├── cache
-├── dist
-├── src
-│   ├── es-es5
-│   ├── react
-│   ├── ts-js
-│   └── tsx-js
-├── .eslintrc // 需要手动配置该文件，[详情参考](http://eslint.cn/docs/user-guide/configuring)。
-└── tsconfig.json  // 需要手动配置该文件，[详情参考](https://typescript.bootcss.com/tsconfig-json.html)。
-```
 
+## 文档
+
+- [快速上手](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/getting-started.zh-CN.md)
+- [命令](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/command.zh-CN.md)
+- [目录规范](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/dir.zh-CN.md)
+- [构建](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/build.zh-CN.md)
+- [配置](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/config.zh-CN.md)
+- [ESlint使用](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/eslint.zh-CN.md)
+- [Typescript使用](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/typescript.zh-CN.md)
+- [扩展Loader](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/extension-loader.zh-CN.md)
+- [JavaScript注入文档](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/jsinline.zh-CN.md)
+- [OMG额外配置](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/auxiliary.zh-CN.md)

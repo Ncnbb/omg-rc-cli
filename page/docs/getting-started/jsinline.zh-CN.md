@@ -3,6 +3,8 @@ title: JavaScript注入文档
 order: 8
 ---
 
+# JavaScript注入文档
+
 在某些情况下，例如我们需要将统计埋点或者rem的计算代码前置在head当中，并且代码采用的是内联的方式注入的html，那么在`OMG`中也是支持html注入js代码到你想要的位置。
 
 omg.config.js

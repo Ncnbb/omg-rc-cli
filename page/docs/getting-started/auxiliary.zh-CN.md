@@ -2,6 +2,7 @@
 title: OMG额外配置
 order: 9
 ---
+# OMG额外配置
 
 ## output
 
