@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/css-example/js/css-example.js","vender~css-example~scss-example","style~css-example"]);
+/******/ 	deferredModules.push(["./src/css-example/js/css-example.js","vendors~css-example~s~27aac3a2","styles~css-example"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })

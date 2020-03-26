@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/scss-example/js/scss-example.js","react-runtime","vender~es-es5-example~font-example~html-example~images-example~jsinline-example~lazy-load-example~react-example~scss-example~svg-example","vender~font-example~html-example~images-example~jsinline-example~lazy-load-example~react-example~scss-example~svg-example","jsinline-example~reac~d8324398","vender~css-example~scss-example","style~scss-example"]);
+/******/ 	deferredModules.push(["./src/scss-example/js/scss-example.js","react-runtime","vendors~es-es5-exampl~3c1b604e","vendors~font-example~~39475373","jsinline-example~reac~d8324398","vendors~css-example~s~27aac3a2","styles~scss-example"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })

@@ -13,8 +13,11 @@ async function readHtml ( name ) {
 }
 
 module.exports = (env) => {
-    console.log(env);
     return {
+        omg: {
+            // noCache: true
+            // cacheToGlobal: true
+        },
         entry: {
             eaentry: '@eagleeye-jssdk/loader/zuzuche.js?__inline',
         },

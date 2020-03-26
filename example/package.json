@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/runtime-corejs3": "^7.9.2",
     "@eagleeye-jssdk/loader": "^1.6.0",
     "@types/react": "16.9.20",
     "@types/react-dom": "16.9.5",
@@ -25,6 +24,7 @@
     "zzc-design-mobile": "^3.5.7"
   },
   "devDependencies": {
+    "@babel/runtime-corejs3": "^7.9.2",
     "axios": "^0.19.2",
     "node-sass": "^4.12.0"
   }
