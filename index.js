@@ -49,7 +49,7 @@ program
     .command( 'build [targetPath] [targetDir]' )
     .description( 'build file, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
     .action( async ( path, dir ) => {
-        const result = await build( path, dir );
+        const result = await build( path, dir, env );
         if ( result ) {
             commandDone( 'ok', 'omg build task done!' );
         } else {
@@ -62,7 +62,7 @@ program
     .command( 'watch [targetPath] [targetDir]' )
     .description( 'build file, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
     .action( async ( path, dir ) => {
-        const result = await watch( path, dir );
+        const result = await watch( path, dir, env );
         if ( result ) {
             commandDone( 'ok', 'omg watch task end!' );
         } else {
@@ -75,7 +75,7 @@ program
     .command( 'server [targetPath] [targetDir]' )
     .description( 'dev server, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
     .action( async ( path, dir ) => {
-        const result = await server( path, dir );
+        const result = await server( path, dir, env );
         if ( result ) {
             commandDone( 'ok', 'omg server task end!' );
         } else {
@@ -88,7 +88,7 @@ program
     .command( 'publish [targetPath] [targetDir]' )
     .description( 'publish file, [targetPath] specify publish directory, [targetDir] specified file in dirTarget.' )
     .action( async ( path, dir ) => {
-        const result = await publish( path, dir );
+        const result = await publish( path, dir, env );
         if ( result ) {
             commandDone( 'ok', 'omg publish task done!' );
         } else {
@@ -96,8 +96,22 @@ program
         }
         process.exit( 0 );
     } );
+const env = {};
 
-program.parse( process.argv );
+const argv = process.argv.reduce( ( result, item ) => {
+    if ( /--env\..*/.test( item ) ) {
+        const matchKey = item.match(/--env\.(.*)/);
+        if (matchKey && matchKey[1]) {
+            const [key, value] = matchKey[1].split('=');
+            env[key] = value;
+        }
+    } else {
+        result.push(item);
+    }
+    return result;
+}, [] );
+
+program.parse( argv );
 // 默认输出
 // if ( !program.args || program.args.length == 0 ) console.log( logoOutput() )
-if ( !process.argv || process.argv.length == 2 ) console.log( logoOutput() )
+if ( !argv || argv.length == 2 ) console.log( logoOutput() )
