@@ -15,7 +15,7 @@ order: 1
 npm install -g omg-rc-cli
 ```
 
-因为omg-rc-cli需要依赖@babel/runtime-corejs3，所以需要在业务代码中手动引入
+因为omg-rc-cli需要依赖@babel/runtime-corejs3，所以需要在业务代码中手动引入或者在构建的时候，omg会自动检查当前的项目的`package.json`和对应的`@babel/runtime-corejs3`和运行依赖的`@babel/runtime-corejs3`版本是否一致，如果不一致或者没有的情况下，会自动帮项目进行`install`。
 
 ### 依赖引入
 ```Shell

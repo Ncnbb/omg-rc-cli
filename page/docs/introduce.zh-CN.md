@@ -24,10 +24,14 @@ omg-rc-cli 是一套可以快速新建React项目的脚手架，基于webpack二
 - [x] ESlint
 - [x] TypeScript
 - [x] handlebars
-- [ ] 分包
-- [ ] 可配置Typescript语法检测
-- [ ] 可视化脚手架配置界面
+- [x] html资源自动注入
+- [x] 自动资源切割
+- [x] 图片智能优化，支持使用（png,jpg,jpeg,webp,gif） 
+- [x] babel编译缓存
+- [x] 压缩缓存
+- [x] webpack资源依赖高速缓存
+- [x] 多线程编译压缩
 
 ## 使用环境
 
-node v10.x及以上
+node v8.9及以上
