@@ -1,6 +1,9 @@
 
 
 # omg-rc-cli
+
+更详细的文档可以访问['官网'](http://omg.gz-hndq.com/)
+
 ## 介绍
 
 omg-rc-cli 是一套可以快速新建React项目的脚手架，基于webpack二次开发，进行了大量预设配置和功能扩展。
