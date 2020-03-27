@@ -1,0 +1,11 @@
+.idea/
+.DS_Store
+.vscode
+node_modules/
+npm-debug.log
+npm-debug.log*
+package-lock.json
+/example/
+/page/
+/page_server/
+.gitignore
