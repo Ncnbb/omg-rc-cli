@@ -1,7 +1,16 @@
 {
   "name": "omg-rc-cli",
   "version": "1.0.0",
-  "description": "aaa",
+  "description": "webpack for react build cli",
+  "keywords": [
+    "webpack",
+    "cli",
+    "react",
+    "webpack4",
+    "webpack react",
+    "webpack cli",
+    "webpack-cli"
+  ],
   "main": "index.js",
   "bin": {
     "omg": "./bin/omg.js"
@@ -13,7 +22,13 @@
     "type": "git",
     "url": "git+https://github.com/Ncnbb/omg-rc-cli.git"
   },
-  "author": "",
+  "author": [
+    { 
+      "name" : "LLLLLamHo", 
+      "email" : "linhao.4zhong@163.com", 
+      "url" : "https://github.com/orgs/Ncnbb/people/LLLLLamHo"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Ncnbb/omg-rc-cli/issues"
