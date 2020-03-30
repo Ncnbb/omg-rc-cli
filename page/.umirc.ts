@@ -13,5 +13,9 @@ export default defineConfig({
       title: 'GitHub',
       path: 'https://github.com/Ncnbb/omg-rc-cli',
     },
+    {
+      title: '更新日志',
+      path: 'https://github.com/Ncnbb/omg-rc-cli/releases',
+    }
   ]
 });

@@ -49,7 +49,8 @@ module.exports = (env) => {
                     let html = await readHtml( 'react-example' );
                     res.send( html );
                 } );
-            }
+            },
+            hot: true
         },
         resolve: {
             alias: {
