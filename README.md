@@ -1,6 +1,6 @@
 # omg-rc-cli
 
-更详细的文档可以访问[官网](http://omg.gz-hndq.com/)
+更详细的文档可以访问[官网](http://cli.omg-code.com/)
 
 ## 介绍
 
