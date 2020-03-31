@@ -14,6 +14,8 @@ order: 9
 
 指定输出的目录，如果当前运行命令是`omg build ./ member`，那么将会默认输出到`dist/member`中，如果配置了dirName属性，那么将会输出到`dist/[dirName]`中。
 > 如果配置了dirName之后，html注入的资源路径出现问题，可以对publicPath进行调整。
+> 
+> 如果配置为空字符串，那么将直接输出在output.path下。
 
 ## omg
 

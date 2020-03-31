@@ -27,7 +27,7 @@ module.exports = (env) => {
             // chunkFilename: `js/[name].chunk.js`,
             // publicPath: `../`,
             // crossOriginLoading: 'anonymous',
-            // dirName: 'test1'
+            // dirName: ''
         },
         browserslist: [ // 浏览器
             'Chrome >= 45',
@@ -50,11 +50,12 @@ module.exports = (env) => {
                     res.send( html );
                 } );
             },
+            prot: 9599,
             hot: true
         },
         resolve: {
             alias: {
-                // '@': path.resolve( __dirname, './src/book/' ),
+                // '@': path.resolve( __dirname, './src/' ),
                 // '^': path.resolve( __dirname, './src/otherService/' ),
                 // '@@': path.resolve( __dirname, './src/' ),
                 // '@rental': path.resolve( __dirname, './src/mainRental' ),
