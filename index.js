@@ -26,10 +26,11 @@ program
         const result = await initProject( projectName );
         if ( result ) {
             commandDone( 'ok', 'omg init task done!' );
+            process.exit( 0 );
         } else {
             commandDone( 'err', 'omg init task error!' );
+            process.exit( 1 );
         }
-        process.exit( 0 );
     } );
 
 program
@@ -39,78 +40,93 @@ program
         const result = await createDir( dirPath, name );
         if ( result ) {
             commandDone( 'ok', 'omg create task done!' );
+            process.exit( 0 );
         } else {
             commandDone( 'err', 'omg create task error!' );
+            process.exit( 1 );
         }
-        process.exit( 0 );
     } );
 
 program
     .command( 'build [targetPath] [targetDir]' )
+    .option('-r, --remove', 'remove output dir', false)
+    .option('--no-prompt', 'Build prompt is disabled')
+    .option('--no-progress', 'Build progress output is disabled')
     .description( 'build file, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
-    .action( async ( path, dir ) => {
-        const result = await build( path, dir, env );
+    .action( async ( path, dir, options ) => {
+        const result = await build( path, dir, env, options );
         if ( result ) {
             commandDone( 'ok', 'omg build task done!' );
+            process.exit( 0 );
         } else {
             commandDone( 'err', 'omg build task error!' );
+            process.exit( 1 );
         }
-        process.exit( 0 );
     } );
 
 program
     .command( 'watch [targetPath] [targetDir]' )
+    .option('-r, --remove', 'remove output dir', false)
+    .option('--no-prompt', 'Build prompt is disabled')
+    .option('--no-progress', 'Build progress output is disabled')
     .description( 'build file, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
-    .action( async ( path, dir ) => {
-        const result = await watch( path, dir, env );
+    .action( async ( path, dir, options ) => {
+        const result = await watch( path, dir, env, options );
         if ( result ) {
             commandDone( 'ok', 'omg watch task end!' );
+            process.exit( 0 );
         } else {
             commandDone( 'err', 'omg watch task error!' );
+            process.exit( 1 );
         }
-        process.exit( 0 );
     } );
 
 program
     .command( 'server [targetPath] [targetDir]' )
+    .option('--no-prompt', 'Build prompt is disabled')
+    .option('--no-progress', 'Build progress output is disabled')
     .description( 'dev server, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
-    .action( async ( path, dir ) => {
-        const result = await server( path, dir, env );
+    .action( async ( path, dir, options ) => {
+        const result = await server( path, dir, env, options );
         if ( result ) {
             commandDone( 'ok', 'omg server task end!' );
+            process.exit( 0 );
         } else {
             commandDone( 'err', 'omg server task error!' );
+            process.exit( 1 );
         }
-        process.exit( 0 );
     } );
 
 program
     .command( 'publish [targetPath] [targetDir]' )
+    .option('-r, --remove', 'remove output dir', false)
+    .option('--no-prompt', 'Build prompt is disabled')
+    .option('--no-progress', 'Build progress output is disabled')
     .description( 'publish file, [targetPath] specify publish directory, [targetDir] specified file in dirTarget.' )
-    .action( async ( path, dir ) => {
-        const result = await publish( path, dir, env );
+    .action( async ( path, dir, options ) => {
+        const result = await publish( path, dir, env, options );
         if ( result ) {
             commandDone( 'ok', 'omg publish task done!' );
+            process.exit( 0 );
         } else {
             commandDone( 'err', 'omg publish task error!' );
+            process.exit( 1 );
         }
-        process.exit( 0 );
     } );
 const env = {};
 
 const argv = process.argv.reduce( ( result, item ) => {
     if ( /--env\..*/.test( item ) ) {
-        const matchKey = item.match(/--env\.(.*)/);
-        if (matchKey && matchKey[1]) {
-            const [key, value] = matchKey[1].split('=');
+        const matchKey = item.match( /--env\.(.*)/ );
+        if ( matchKey && matchKey[1] ) {
+            const [key, value] = matchKey[1].split( '=' );
             env[key] = value;
         }
     } else {
-        result.push(item);
+        result.push( item );
     }
     return result;
 }, [] );
-
 program.parse( argv );
 // 默认输出
 // if ( !program.args || program.args.length == 0 ) console.log( logoOutput() )
