@@ -54,3 +54,42 @@ omg参数是针对omg自身的一些功能够参数，控制部分webpack的一�
     smp: true // 或false
 }
 ```
+
+## 美化界面
+
+### jarvis
+- boolean
+- 默认值：false
+- 详情
+
+开启美化界面，只能在server命令下使用
+
+
+### jarvisOpt
+- object
+- 默认值：
+  - host: '0.0.0.0'
+  - port: 9901
+- 详情
+
+可以参考： [github](https://github.com/zouhir/jarvis)
+
+## 构建包依赖分析
+
+### analyzer
+- boolean
+- 默认值：false
+- 详情
+
+开启依赖分析，默认在server命令下使用
+
+
+### jarvisOpt
+- object
+- 默认值：
+  - analyzerMode: 'server'
+  - analyzerHost: '0.0.0.0'
+  - analyzerPort: 9902
+- 详情
+
+可以参考： [github](https://github.com/webpack-contrib/webpack-bundle-analyzer)
