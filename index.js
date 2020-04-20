@@ -50,6 +50,7 @@ program
 program
     .command( 'build [targetPath] [targetDir]' )
     .option('-r, --remove', 'remove output dir', false)
+    .option('-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null)
     .option('--no-prompt', 'Build prompt is disabled')
     .option('--no-progress', 'Build progress output is disabled')
     .description( 'build file, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
@@ -67,6 +68,7 @@ program
 program
     .command( 'watch [targetPath] [targetDir]' )
     .option('-r, --remove', 'remove output dir', false)
+    .option('-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null)
     .option('--no-prompt', 'Build prompt is disabled')
     .option('--no-progress', 'Build progress output is disabled')
     .description( 'build file, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
@@ -83,6 +85,7 @@ program
 
 program
     .command( 'server [targetPath] [targetDir]' )
+    .option('-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null)
     .option('--no-prompt', 'Build prompt is disabled')
     .option('--no-progress', 'Build progress output is disabled')
     .description( 'dev server, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
@@ -100,6 +103,7 @@ program
 program
     .command( 'publish [targetPath] [targetDir]' )
     .option('-r, --remove', 'remove output dir', false)
+    .option('-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null)
     .option('--no-prompt', 'Build prompt is disabled')
     .option('--no-progress', 'Build progress output is disabled')
     .description( 'publish file, [targetPath] specify publish directory, [targetDir] specified file in dirTarget.' )

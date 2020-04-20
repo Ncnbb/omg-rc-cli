@@ -27,6 +27,16 @@ omg watch [targetPath] [targetDir] // 监听构建
 omg server [targetPath] [targetDir] // 本地服务
 omg publish [targetPath] [targetDir] // 生成构建
 ```
+## 指定构建单一文件
+
+- -t --target
+  - 默认：null
+
+一般情况下用过targetPath搭配targetDir可以很自由的进行多个目录之间的打包任务，但是当特殊情况下，无视webpack的分包策略优化，进行指定的文件进行构建，可以使用`-t --target`参数指定文件名称，那么omg将会根据`targetPath`和`targetDir`的目录下查找指定target的文件名进行单一构建。
+
+```shell
+omg build [targetPath] [targetDir] --no-prompt
+```
 
 ## 删除目录
 
