@@ -84,7 +84,7 @@ omg参数是针对omg自身的一些功能够参数，控制部分webpack的一�
 开启依赖分析，默认在server命令下使用
 
 
-### jarvisOpt
+### analyzerOpt
 - object
 - 默认值：
   - analyzerMode: 'server'

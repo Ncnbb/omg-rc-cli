@@ -59,10 +59,6 @@ omg build [targetPath] [targetDir] -r
 
 在构建命令中添加`--no-progress`参数，OMG将不会开启构建进度，一般用于服务器构建时减少对应进程中的log数量。
 
-```shell
-omg build [targetPath] [targetDir] --no-progress
-```
-
 ## 去除构架详细提示
 
 - --no-prompt
@@ -72,6 +68,17 @@ omg build [targetPath] [targetDir] --no-progress
 
 ```shell
 omg build [targetPath] [targetDir] --no-prompt
+```
+
+## 去除构建publish时添加hash
+
+- --no-chunkhash
+  - 默认：关闭
+
+添加`--no-chunkhash`参数，将会在publish时不会添加hash后缀。
+
+```shell
+omg publish [targetPath] [targetDir] --no-chunkhash
 ```
 
 ## 更多参数传递
