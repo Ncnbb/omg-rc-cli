@@ -21,6 +21,67 @@ order: 9
 
 omg参数是针对omg自身的一些功能够参数，控制部分webpack的一些额外功能。
 
+### autoFindEntry
+- boolean
+- 默认值：true
+- 详情
+
+默认情况下omg将根据自己的规则进行入口文件的查找，如果需要关闭自动寻找入口功能，可以通过此参数设置为`false`，来进行控制，那么入口配置权将交由开发者自己配置。
+
+### filenameBefore
+- string
+- 默认值：''
+- 详情
+
+当需要对输出的文件的目录进行更细致的划分时使用，例如默认情况下，所有的资源都会根据资源类型输出到dist目录下的js，css，svg，html，images目录中，如果希望不同入口文件的js，css等资源可以输出到对应入口名称的目录下，再区分js，css，svg，html，images目录的话，可以使用`filenameBefore`来实现。
+
+默认情况下输出目录结构：
+```markdown
+├── projectName
+|   ├── dist
+|   |   ├── js
+|   |   |   ├── entre1.js
+|   |   |   ├── entre2.js
+|   |   |   ├── ....
+|   |   ├── css
+|   |   |   ├── entre1.css
+|   |   |   ├── entre2.css
+|   |   |   ├── ....
+|   |   ├── html
+|   |   ├── images
+|   |   ├── svg
+|   ├── package.json
+|   ├── tsconfig.json(可选)
+|   ├── .eslintrc(可选)
+```
+
+`filenameBefore`填写为`'[name]'`后输出结果
+
+```markdown
+├── projectName
+|   ├── dist
+|   |   ├── entry1
+|   |   |   ├── js
+|   |   |   |   ├── entry1.js
+|   |   |   ├── css
+|   |   |   |   ├── entry1.css
+|   |   |   ├── images
+|   |   |   ├── svg
+|   |   |   ├── html
+|   |   ├── entry2
+|   |   |   ├── js
+|   |   |   |   ├── entry2.js
+|   |   |   ├── css
+|   |   |   |   ├── entry2.css
+|   |   |   ├── images
+|   |   |   ├── svg
+|   |   |   ├── html
+|   ├── package.json
+|   ├── tsconfig.json(可选)
+|   ├── .eslintrc(可选)
+```
+
+
 ### noCache
 
 - boolean

@@ -62,14 +62,14 @@ module.exports = (env) => {
                 // '@rentalAfter': path.resolve( __dirname, './src/rentalAfter' ),
             }
         },
-        analyzer: true,
-        analyzerOpt: {
-            analyzerPort: 9901
-        },
-        jarvis: true,
-        jarvisOpt: {
-            port: 9902
-        },
+        // analyzer: true,
+        // analyzerOpt: {
+        //     analyzerPort: 9901
+        // },
+        // jarvis: true,
+        // jarvisOpt: {
+        //     port: 9902
+        // },
         // loaderOpt: {
         //     scss: (rules) => {
         //         console.log(rules);
