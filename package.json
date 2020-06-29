@@ -1,6 +1,6 @@
 {
   "name": "omg-rc-cli",
-  "version": "1.0.14",
+  "version": "1.1.0",
   "description": "webpack for react build cli",
   "keywords": [
     "webpack",
@@ -11,7 +11,7 @@
     "webpack cli",
     "webpack-cli"
   ],
-  "main": "index.js",
+  "main": "index_node.js",
   "bin": {
     "omg": "./bin/omg.js"
   },

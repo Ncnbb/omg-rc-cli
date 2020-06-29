@@ -50,7 +50,7 @@ module.exports = (env) => {
                     res.send( html );
                 } );
             },
-            prot: 9599,
+            port: 9599,
             hot: true
         },
         resolve: {

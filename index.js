@@ -53,6 +53,7 @@ program
     .option('-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null)
     .option('--no-prompt', 'Build prompt is disabled')
     .option('--no-progress', 'Build progress output is disabled')
+    .option('--no-console', 'console log is disabled')
     .description( 'build file, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
     .action( async ( path, dir, options ) => {
         const result = await build( path, dir, env, options );
@@ -61,6 +62,26 @@ program
             process.exit( 0 );
         } else {
             commandDone( 'err', 'omg build task error!' );
+            process.exit( 1 );
+        }
+    } );
+
+program
+    .command( 'publish [targetPath] [targetDir]' )
+    .option('-r, --remove', 'remove output dir', false)
+    .option('-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null)
+    .option('--no-chunkhash', 'run publish output file not add chunkhash to file name')
+    .option('--no-prompt', 'Build prompt is disabled')
+    .option('--no-progress', 'Build progress output is disabled')
+    .option('--no-console', 'console log is disabled')
+    .description( 'publish file, [targetPath] specify publish directory, [targetDir] specified file in dirTarget.' )
+    .action( async ( path, dir, options ) => {
+        const result = await publish( path, dir, env, options );
+        if ( result ) {
+            commandDone( 'ok', 'omg publish task done!' );
+            process.exit( 0 );
+        } else {
+            commandDone( 'err', 'omg publish task error!' );
             process.exit( 1 );
         }
     } );
@@ -100,24 +121,6 @@ program
         }
     } );
 
-program
-    .command( 'publish [targetPath] [targetDir]' )
-    .option('-r, --remove', 'remove output dir', false)
-    .option('-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null)
-    .option('--no-chunkhash', 'run publish output file not add chunkhash to file name')
-    .option('--no-prompt', 'Build prompt is disabled')
-    .option('--no-progress', 'Build progress output is disabled')
-    .description( 'publish file, [targetPath] specify publish directory, [targetDir] specified file in dirTarget.' )
-    .action( async ( path, dir, options ) => {
-        const result = await publish( path, dir, env, options );
-        if ( result ) {
-            commandDone( 'ok', 'omg publish task done!' );
-            process.exit( 0 );
-        } else {
-            commandDone( 'err', 'omg publish task error!' );
-            process.exit( 1 );
-        }
-    } );
 const env = {};
 
 const argv = process.argv.reduce( ( result, item ) => {

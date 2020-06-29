@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "create": "omg create ./src createDir",
-    "build": "omg build"
+    "build": "omg build",
+    "node_build": "node nodeApi.js"
   },
   "author": "",
   "license": "ISC",

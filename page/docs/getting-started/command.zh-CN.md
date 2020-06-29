@@ -45,21 +45,20 @@ omg build [targetPath] [targetDir] -t [targetDirName]
 - -r --remove
   - 默认：关闭
 
-
 ```shell
 omg build [targetPath] [targetDir] -r
 ```
 
 > 需要注意，-r参数只会在watch，publish，build中生效，server命令不会生效
 
-## 去除构架进度提示
+## 去除构建进度提示
 
 - --no-progress
   - 默认：开启
 
 在构建命令中添加`--no-progress`参数，OMG将不会开启构建进度，一般用于服务器构建时减少对应进程中的log数量。
 
-## 去除构架详细提示
+## 去除构建详细提示
 
 - --no-prompt
   - 默认：开启
@@ -79,6 +78,17 @@ omg build [targetPath] [targetDir] --no-prompt
 
 ```shell
 omg publish [targetPath] [targetDir] --no-chunkhash
+```
+
+## 去所有的打印信息
+
+- --no-console
+  - 默认：关闭
+
+添加`--no-console`参数，将会在build或publish时不会打印任何信息，在服务器构建时提供帮助。
+
+```shell
+omg publish [targetPath] [targetDir] --no-console
 ```
 
 ## 更多参数传递
