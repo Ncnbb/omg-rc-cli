@@ -1,1 +1,3 @@
-console.log('123123');
+export default function consoleFn(text) {
+    console.log('123123');
+}
