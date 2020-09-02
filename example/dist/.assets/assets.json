@@ -5,7 +5,7 @@
 	],
 	"es-es5-example": [
 		"js/vendors~es-es5-exampl~6da2a0b5-08fb83a2.chunk.js",
-		"js/es-es5-example-33a28f4c.js"
+		"js/es-es5-example-7be91e2f.js"
 	],
 	"font-example": [
 		"js/react-runtime-39be5991.chunk.js",
@@ -42,12 +42,12 @@
 	"lazy-load-example": [
 		"js/react-runtime-39be5991.chunk.js",
 		"js/vendors~es-es5-exampl~6da2a0b5-08fb83a2.chunk.js",
-		"js/lazy-load-example-51019dbf.js"
+		"js/lazy-load-example-f6601d63.js"
 	],
 	"lazy-load-example2": [
 		"js/react-runtime-39be5991.chunk.js",
 		"js/vendors~es-es5-exampl~6da2a0b5-08fb83a2.chunk.js",
-		"js/lazy-load-example2-869ddf20.js"
+		"js/lazy-load-example2-31602fea.js"
 	],
 	"react-example": [
 		"js/react-runtime-39be5991.chunk.js",
