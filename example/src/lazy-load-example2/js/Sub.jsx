@@ -8,8 +8,8 @@ export default class Sub extends React.Component {
     render () {
         return (
             <div>
-                <h1>后加载内容</h1>
-                <Button>1111</Button>
+                <h1>后加载内容2</h1>
+                <Button>2222</Button>
             </div>
         );
     }
