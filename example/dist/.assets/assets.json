@@ -5,7 +5,7 @@
 	],
 	"es-es5-example": [
 		"js/vendors~es-es5-exampl~6da2a0b5-08fb83a2.chunk.js",
-		"js/es-es5-example-1ea07bdd.js"
+		"js/es-es5-example-fbe40a58.js"
 	],
 	"font-example": [
 		"js/react-runtime-39be5991.chunk.js",
@@ -37,25 +37,25 @@
 		"js/vendors~es-es5-exampl~6da2a0b5-08fb83a2.chunk.js",
 		"css/2-d57add62.chunk.css",
 		"js/2-d57add62.chunk.js",
-		"js/jsinline-example-9c5a9fc6.js"
+		"js/jsinline-example-afe659ac.js"
 	],
 	"lazy-load-example": [
 		"js/react-runtime-39be5991.chunk.js",
 		"js/vendors~es-es5-exampl~6da2a0b5-08fb83a2.chunk.js",
-		"js/lazy-load-example-807ad5f9.js"
+		"js/lazy-load-example-db782f63.js"
 	],
 	"lazy-load-example2": [
 		"js/react-runtime-39be5991.chunk.js",
 		"js/vendors~es-es5-exampl~6da2a0b5-08fb83a2.chunk.js",
-		"js/lazy-load-example2-fc09a0f1.js"
+		"js/lazy-load-example2-5fb2c7e1.js"
 	],
 	"react-example": [
 		"js/react-runtime-39be5991.chunk.js",
 		"js/vendors~es-es5-exampl~6da2a0b5-08fb83a2.chunk.js",
 		"css/2-d57add62.chunk.css",
 		"js/2-d57add62.chunk.js",
-		"css/react-example-03d510ab.css",
-		"js/react-example-03d510ab.js"
+		"css/react-example-501d6b31.css",
+		"js/react-example-501d6b31.js"
 	],
 	"scss-example": [
 		"js/react-runtime-39be5991.chunk.js",
@@ -68,8 +68,8 @@
 	"svg-example": [
 		"js/react-runtime-39be5991.chunk.js",
 		"js/vendors~es-es5-exampl~6da2a0b5-08fb83a2.chunk.js",
-		"css/svg-example-21a813b0.css",
-		"js/svg-example-21a813b0.js"
+		"css/svg-example-12ffc579.css",
+		"js/svg-example-12ffc579.js"
 	],
 	"tree-shaking": [
 		"js/tree-shaking-e95d1415.js"
