@@ -53,16 +53,3 @@ omg build [targetPath]
 # 构建指定目录的代码 匹配方式 js/*.(js|jsx)
 omg build [targetPath] [targetDir]
 ```
-
-## 文档
-
-- [快速上手](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/getting-started.zh-CN.md)
-- [命令](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/command.zh-CN.md)
-- [目录规范](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/dir.zh-CN.md)
-- [构建](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/build.zh-CN.md)
-- [配置](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/config.zh-CN.md)
-- [ESlint使用](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/eslint.zh-CN.md)
-- [Typescript使用](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/typescript.zh-CN.md)
-- [扩展Loader](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/extension-loader.zh-CN.md)
-- [JavaScript注入文档](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/jsinline.zh-CN.md)
-- [OMG额外配置](https://github.com/Ncnbb/omg-rc-cli/blob/master/page/docs/getting-started/auxiliary.zh-CN.md)
