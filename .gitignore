@@ -5,5 +5,4 @@ package-lock.json
 example/package-lock.json
 page/package-lock.json
 .vscode
-example/dist/
 
