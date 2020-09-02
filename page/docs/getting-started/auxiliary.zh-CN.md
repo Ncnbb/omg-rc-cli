@@ -98,6 +98,26 @@ omg参数是针对omg自身的一些功能够参数，控制部分webpack的一�
 
 默认情况下，构建的存储地址是运行目录下的`node_modules/.cache`，如果想将缓存保存在全局固定的地方，那么可以使用`cacheToGlobal`，设置为`true`，那么缓存文件将会存放在全局的`node_modules`中，如果在服务器构建，在docker容器中进行构建，那么该参数能有效的将缓存保存在全局。
 
+### 输出构建资产
+
+将构建后的enter模块名在构建后所关联的资源路径输出到指定目录的json文件中。
+
+#### openOutputAssets
+
+- boolean
+- 默认值：false
+- 详情
+
+开启资产输出功能。
+
+#### outputAssetsDirName
+
+- string
+- 默认值：'.assets'
+- 详情
+
+当`openOutputAssets`为`true`时生效，默认是`.assets`，会根据omg.config中的output.path作为目标进行合拼路径。
+
 ## smp
 
 - boolean

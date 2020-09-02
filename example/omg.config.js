@@ -17,6 +17,7 @@ module.exports = (env) => {
         omg: {
             // noCache: true
             // cacheToGlobal: true
+            openOutputAssets: true
         },
         entry: {
             eaentry: '@eagleeye-jssdk/loader/zuzuche.js?__inline',
