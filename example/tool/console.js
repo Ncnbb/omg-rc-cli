@@ -1,3 +1,3 @@
 export default function consoleFn(text) {
-    console.log('1231234444');
+    console.log('12312344444444');
 }
