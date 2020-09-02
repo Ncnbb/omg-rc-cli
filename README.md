@@ -1,12 +1,19 @@
-# omg-rc-cli
+<h1 align="center">omg-rc-cli</h1>
+<p align="center">易用高效的React脚手架</p>
+<p align='center'>
+<img alt='npm' src='https://img.shields.io/npm/v/omg-rc-cli'/>
+<img alt='npm' src='https://img.shields.io/npm/dw/omg-rc-cli'/>
+<img alt='NPM' src='https://img.shields.io/npm/l/omg-rc-cli'/>
+</p>
 
-更详细的文档可以访问[官网](http://cli.omg-code.com/)
 
 ## 介绍
 
 omg-rc-cli 是一套可以快速新建React项目的脚手架，基于webpack二次开发，进行了大量预设配置和功能扩展。
 
 每次我们编写新项目时，都会为配置webpack而烦恼，而且针对不同的目录结构，也会有不同的配置方式，大大影响我们的开发效率，omg-rc-cli就是为了解决这一系列问题而开发的一套React脚手架，能帮助团队能快速的投入开发，并且互相遵从一些目录结构的规范进行页面开发。
+
+更详细的文档可以访问[官网](http://cli.omg-code.com/)
 
 ## 特性
 - 基于webpack构建，并带有合理的默认配置。
