@@ -25,13 +25,6 @@
     "type": "git",
     "url": "git+https://github.com/Ncnbb/omg-rc-cli.git"
   },
-  "author": [
-    {
-      "name": "LLLLLamHo",
-      "email": "linhao.4zhong@163.com",
-      "url": "https://github.com/orgs/Ncnbb/people/LLLLLamHo"
-    }
-  ]
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Ncnbb/omg-rc-cli/issues"
@@ -100,5 +93,10 @@
     "lib": "lib",
     "test": "test"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "author": {
+      "name": "LLLLLamHo",
+      "email": "linhao.4zhong@163.com",
+      "url": "https://github.com/orgs/Ncnbb/people/LLLLLamHo"
+  }
 }
