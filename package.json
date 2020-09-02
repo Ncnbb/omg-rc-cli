@@ -18,6 +18,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ncnbb/omg-rc-cli.git"
@@ -28,7 +31,7 @@
       "email": "linhao.4zhong@163.com",
       "url": "https://github.com/orgs/Ncnbb/people/LLLLLamHo"
     }
-  ],
+  ]
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Ncnbb/omg-rc-cli/issues"
