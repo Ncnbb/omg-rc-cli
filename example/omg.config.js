@@ -56,7 +56,7 @@ module.exports = (env) => {
         },
         resolve: {
             alias: {
-                // '@': path.resolve( __dirname, './src/' ),
+                '@': path.resolve( __dirname, './tool/' ),
                 // '^': path.resolve( __dirname, './src/otherService/' ),
                 // '@@': path.resolve( __dirname, './src/' ),
                 // '@rental': path.resolve( __dirname, './src/mainRental' ),
