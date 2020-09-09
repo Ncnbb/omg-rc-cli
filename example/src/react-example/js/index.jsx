@@ -15,7 +15,7 @@ class App extends Component {
         return (
             <div>
                 <h1>OMG-CLI</h1>
-                <Button>1111433343333</Button>
+                <Button>322</Button>
                 <h1>123123123</h1>
                 <Sub/>
             </div>
