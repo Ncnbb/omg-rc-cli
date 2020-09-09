@@ -9,6 +9,7 @@ import Sub from './Sub';
 import Button from 'zzc-design-mobile/lib/Button';
 import consoleFn from '../../../tool/console';
 import say from '@/say';
+import '../style/jsImportCss.css';
 
 class App extends Component {
 

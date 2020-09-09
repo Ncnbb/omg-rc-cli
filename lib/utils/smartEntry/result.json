@@ -1,0 +1,165 @@
+{
+	"smartEntry-example": {
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/js/smartEntry-example.jsx": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/js/smartEntry-example.jsx",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/js/smartEntry-example.jsx",
+			"type": "script",
+			"contentHash": "c775d329f887be57f13f19fefb3c37bee26dce3f782c22ccdb2ec2250afc462b",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/index.scss": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/index.scss",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/index.scss",
+			"type": "scss",
+			"contentHash": "7f23ec37a2b2c70e488fde75535e8134f0db11131d135c10ec2a387f28e137c7",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/base.scss": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/base.scss",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/base.scss",
+			"type": "scss",
+			"contentHash": "faecb7b7711974cd8b7c2b1a8117af758e7b31645946eab459379b500cc7467a",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/font.scss": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/font.scss",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/font.scss",
+			"type": "scss",
+			"contentHash": "2ca63c0c3064d3b09b05e1570430e3b3eba58d3eb62e84f112665c369573e916",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/fonts/icomoon.eot": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/fonts/icomoon.eot",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/fonts/icomoon.eot",
+			"type": "other",
+			"contentHash": "86bf9fee2da3cef402009420e189053624d7703f7ebb28acee18ff4e05240050",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/fonts/icomoon.ttf": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/fonts/icomoon.ttf",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/fonts/icomoon.ttf",
+			"type": "other",
+			"contentHash": "f70a5e60a40822c0e9db370af50151f1dcc3677e53d85a0654109eb8fed6ec95",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/fonts/icomoon.woff": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/fonts/icomoon.woff",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/fonts/icomoon.woff",
+			"type": "other",
+			"contentHash": "5bb8502a87b943f4e64e4001053ef531b2c029d105ea523c6b0a29aa63705578",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/scssImportCss.css": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/scssImportCss.css",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/scssImportCss.css",
+			"type": "css",
+			"contentHash": "1d95b9a1feed7027ef800b7fb3cfb44c883a7e48fc5145116025fc407726ae13",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/1.jpg": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/1.jpg",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/1.jpg",
+			"type": "other",
+			"contentHash": "bcfbdf184e61d3088a29ba006827161df8a509d9f8a07861301dc113f838e790",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/2.png": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/2.png",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/2.png",
+			"type": "other",
+			"contentHash": "c40349eaaca46f1fb900ecb16d29e79b7b0d06deece7732f6dba74c4249d2e75",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/3.gif": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/3.gif",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/3.gif",
+			"type": "other",
+			"contentHash": "89da7a7ad54819f54c38b3fd9173be35c5c8de0ec19e4d6e3729afb33c977800",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/4.webp": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/4.webp",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/images/4.webp",
+			"type": "other",
+			"contentHash": "2a96992d865d41acf664e2bae0f0d220f1fe6864e507b4a47494caf72cec4408",
+			"version": null
+		},
+		"react": {
+			"name": "react",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/node_modules/react",
+			"type": "module",
+			"contentHash": null,
+			"version": "16.13.1"
+		},
+		"react-dom": {
+			"name": "react-dom",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/node_modules/react-dom",
+			"type": "module",
+			"contentHash": null,
+			"version": "16.13.1"
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/svg/edit.svg": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/svg/edit.svg",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/svg/edit.svg",
+			"type": "other",
+			"contentHash": "7b8ee35cf95f57dcde1a485fb96badd58490276899371f21362cfda98c45d829",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/svg/ic_free.svg": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/svg/ic_free.svg",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/svg/ic_free.svg",
+			"type": "other",
+			"contentHash": "5b9422039ae2a2e729ec70c9db8c964f3ce4dcf07505df97fd466f60ba3a6869",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/js/Sub.jsx": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/js/Sub.jsx",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/js/Sub.jsx",
+			"type": "script",
+			"contentHash": "375dd1681b573e8e372d28bc5a5ec9e2c3f7c3f7385f57ee73aa2069db399b31",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/tool/say.js": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/tool/say.js",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/tool/say.js",
+			"type": "script",
+			"contentHash": "f2cdc640fc74510d3c2945f07e1bae51c3f4c08fdf15607d3aa8a09337212cfc",
+			"version": null
+		},
+		"zzc-design-mobile": {
+			"name": "zzc-design-mobile",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/node_modules/zzc-design-mobile",
+			"type": "module",
+			"contentHash": null,
+			"version": "3.6.2"
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/tool/console.js": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/tool/console.js",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/tool/console.js",
+			"type": "script",
+			"contentHash": "61950bdf750bb5e4858848f0f3d7ca8d0239ab02a3c1f2953d88ed288cc3891c",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/jsImportCss.css": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/jsImportCss.css",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/jsImportCss.css",
+			"type": "css",
+			"contentHash": "7adb2b05cabb87e78f8fee7763d1bf071560c547e2c6f4d9524f21b442daffb1",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/js/Lazy.jsx": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/js/Lazy.jsx",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/js/Lazy.jsx",
+			"type": "script",
+			"contentHash": "f07332de1eea0caf79140aed849eec4d6fa8e181ccfb35c26b073321d52767ef",
+			"version": null
+		},
+		"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/lazy.scss": {
+			"name": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/lazy.scss",
+			"path": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/smartEntry-example/style/lazy.scss",
+			"type": "scss",
+			"contentHash": "79f8a0936d71a4316bb9fb010618d3a41292332a42f9d4965444580026531072",
+			"version": null
+		}
+	}
+}
