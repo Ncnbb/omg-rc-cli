@@ -22,7 +22,7 @@ export default class App extends React.Component {
         const { SubComponent } = this.state;
         return (
             <div>
-                <h1>1231231</h1>
+                <h1>1231233331</h1>
                 {SubComponent && <SubComponent/>}
             </div>
         );
