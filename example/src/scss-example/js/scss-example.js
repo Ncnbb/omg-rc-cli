@@ -10,7 +10,7 @@ class App extends Component {
         return (
             <div>
                 <h1>OMG-CLI</h1>
-                <Button>111143334</Button>
+                <Button>11333412123</Button>
                 <p className={styles['class-name1']}>this is text</p>
             </div>
         )

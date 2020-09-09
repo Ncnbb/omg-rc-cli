@@ -1,9 +1,0 @@
-{
-	"lazy-load-example": [
-		"js/react-runtime.chunk.js",
-		"js/lazy-load-example.js"
-	],
-	"eaentry": [
-		"js/eaentry.js"
-	]
-}
