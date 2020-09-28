@@ -21,6 +21,10 @@ h1 {
     }
 }
 
+.newWorkPng {
+    background: url("//zzccdn.zuzuche.com/irc-common/upload_static/69/69/a274dbe816fa3b2dfe799ba99e027c12.png") no-repeat;
+}
+
 .logo{
     width: 300px;
     height: 300px;
@@ -50,4 +54,7 @@ h1 {
     height: 300px;
     background: url('../images/1.jpg') no-repeat;
     background-size: contain;
+}
+.base64image{
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA0CAMAAAD2UzvkAAAAOVBMVEUAAADNzc3Nzc3Nzc3Nzc3Ozs7Ozs7MzMzMzMzNzc3Ozs7Nzc3Nzc3MzMzNzc3Ozs7Nzc3Nzc3MzMwLyikhAAAAEnRSTlMA+bI9/YZ3GeblGvN6eIU+/ntDIH1bAAAAlklEQVR4Xu2W2wrDIBAF42rUpKaX+f+PrSUFoQhmi487LweODCr7sssk1tu9V41wuF41AuhUEzUvG/A9bNGvNvGn9QpwXYNQPuXj6WK6/sj9cMHXFKLubwdSI5N0A9jJNeBntmsT+hU0bcB0zTTTTDPNNNNMy+w6K5FrCIdOi0gNH1xU3Jfiuc4sJaAilLaqjaGtan/zBl3TGJ1UIY7nAAAAAElFTkSuQmCC) no-repeat;
 }
