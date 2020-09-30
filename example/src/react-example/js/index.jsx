@@ -11,6 +11,31 @@ class App extends Component {
         consoleFn('1111');
     }
 
+    say(text) { 
+        for(let i = 0; i < 10; i++) {
+            console.log(text);
+            console.log(text);
+            console.log(text);
+            console.log(text);
+            console.log(text);
+            console.log(text);
+            console.log(text);
+        }
+    }
+
+    say2(text) { 
+        for(let i = 0; i < 10; i++) {
+            console.log(text);
+            console.log(text);
+            console.log(text);
+            console.log(text);
+            console.log(text);
+            console.log(text);
+            console.log(text);
+        }
+    }
+
+
     render () {
         return (
             <div>

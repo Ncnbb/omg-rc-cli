@@ -1,0 +1,219 @@
+{
+	"clones": [
+		{
+			"format": "jsx",
+			"foundDate": 1601288024545,
+			"duplicationA": {
+				"sourceId": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/react-example/js/index.jsx",
+				"start": {
+					"line": 26,
+					"column": 9,
+					"position": 193
+				},
+				"end": {
+					"line": 39,
+					"column": 11,
+					"position": 297
+				},
+				"range": [
+					605,
+					898
+				]
+			},
+			"duplicationB": {
+				"sourceId": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/react-example/js/index.jsx",
+				"start": {
+					"line": 14,
+					"column": 8,
+					"position": 89
+				},
+				"end": {
+					"line": 26,
+					"column": 9,
+					"position": 192
+				},
+				"range": [
+					315,
+					605
+				]
+			}
+		}
+	],
+	"statistic": {
+		"detectionDate": "2020-09-28T10:13:44.506Z",
+		"formats": {
+			"tsx": {
+				"sources": {
+					"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/tsx-js-example/js/tsx-js-example.tsx": {
+						"lines": 18,
+						"tokens": 128,
+						"sources": 1,
+						"clones": 0,
+						"duplicatedLines": 0,
+						"duplicatedTokens": 0,
+						"percentage": 0,
+						"percentageTokens": 0,
+						"newDuplicatedLines": 0,
+						"newClones": 0
+					},
+					"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/tsx-js-example/js/sub.tsx": {
+						"lines": 8,
+						"tokens": 70,
+						"sources": 1,
+						"clones": 0,
+						"duplicatedLines": 0,
+						"duplicatedTokens": 0,
+						"percentage": 0,
+						"percentageTokens": 0,
+						"newDuplicatedLines": 0,
+						"newClones": 0
+					}
+				},
+				"total": {
+					"lines": 26,
+					"tokens": 198,
+					"sources": 2,
+					"clones": 0,
+					"duplicatedLines": 0,
+					"duplicatedTokens": 0,
+					"percentage": 0,
+					"percentageTokens": 0,
+					"newDuplicatedLines": 0,
+					"newClones": 0
+				}
+			},
+			"handlebars": {
+				"sources": {
+					"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/tsx-js-example/html/tsx-js-example.view.hbs": {
+						"lines": 20,
+						"tokens": 12,
+						"sources": 1,
+						"clones": 0,
+						"duplicatedLines": 0,
+						"duplicatedTokens": 0,
+						"percentage": 0,
+						"percentageTokens": 0,
+						"newDuplicatedLines": 0,
+						"newClones": 0
+					},
+					"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/react-example/html/react-example.view.hbs": {
+						"lines": 20,
+						"tokens": 12,
+						"sources": 1,
+						"clones": 0,
+						"duplicatedLines": 0,
+						"duplicatedTokens": 0,
+						"percentage": 0,
+						"percentageTokens": 0,
+						"newDuplicatedLines": 0,
+						"newClones": 0
+					}
+				},
+				"total": {
+					"lines": 40,
+					"tokens": 24,
+					"sources": 2,
+					"clones": 0,
+					"duplicatedLines": 0,
+					"duplicatedTokens": 0,
+					"percentage": 0,
+					"percentageTokens": 0,
+					"newDuplicatedLines": 0,
+					"newClones": 0
+				}
+			},
+			"scss": {
+				"sources": {
+					"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/react-example/scss/index.scss": {
+						"lines": 4,
+						"tokens": 16,
+						"sources": 1,
+						"clones": 0,
+						"duplicatedLines": 0,
+						"duplicatedTokens": 0,
+						"percentage": 0,
+						"percentageTokens": 0,
+						"newDuplicatedLines": 0,
+						"newClones": 0
+					}
+				},
+				"total": {
+					"lines": 4,
+					"tokens": 16,
+					"sources": 1,
+					"clones": 0,
+					"duplicatedLines": 0,
+					"duplicatedTokens": 0,
+					"percentage": 0,
+					"percentageTokens": 0,
+					"newDuplicatedLines": 0,
+					"newClones": 0
+				}
+			},
+			"jsx": {
+				"sources": {
+					"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/react-example/js/react-example.jsx": {
+						"lines": 19,
+						"tokens": 133,
+						"sources": 1,
+						"clones": 0,
+						"duplicatedLines": 0,
+						"duplicatedTokens": 0,
+						"percentage": 0,
+						"percentageTokens": 0,
+						"newDuplicatedLines": 0,
+						"newClones": 0
+					},
+					"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/react-example/js/index.jsx": {
+						"lines": 52,
+						"tokens": 384,
+						"sources": 1,
+						"clones": 2,
+						"duplicatedLines": 26,
+						"duplicatedTokens": 208,
+						"percentage": 50,
+						"percentageTokens": 54.17,
+						"newDuplicatedLines": 0,
+						"newClones": 0
+					},
+					"/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/react-example/js/Sub.jsx": {
+						"lines": 4,
+						"tokens": 35,
+						"sources": 1,
+						"clones": 0,
+						"duplicatedLines": 0,
+						"duplicatedTokens": 0,
+						"percentage": 0,
+						"percentageTokens": 0,
+						"newDuplicatedLines": 0,
+						"newClones": 0
+					}
+				},
+				"total": {
+					"lines": 75,
+					"tokens": 552,
+					"sources": 3,
+					"clones": 1,
+					"duplicatedLines": 13,
+					"duplicatedTokens": 104,
+					"percentage": 17.33,
+					"percentageTokens": 18.84,
+					"newDuplicatedLines": 0,
+					"newClones": 0
+				}
+			}
+		},
+		"total": {
+			"lines": 145,
+			"tokens": 790,
+			"sources": 8,
+			"clones": 1,
+			"duplicatedLines": 13,
+			"duplicatedTokens": 104,
+			"percentage": 8.97,
+			"percentageTokens": 13.16,
+			"newDuplicatedLines": 0,
+			"newClones": 0
+		}
+	}
+}

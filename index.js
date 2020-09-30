@@ -9,6 +9,7 @@ const build = require( './lib/script/build' );
 const watch = require( './lib/script/watch' );
 const server = require( './lib/script/server' );
 const publish = require( './lib/script/publish' );
+const doctor = require('./lib/script/doctor');
 
 program
     .version( pkg.version, '-v, --version' )
@@ -49,11 +50,11 @@ program
 
 program
     .command( 'build [targetPath] [targetDir]' )
-    .option('-r, --remove', 'remove output dir', false)
-    .option('-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null)
-    .option('--no-prompt', 'Build prompt is disabled')
-    .option('--no-progress', 'Build progress output is disabled')
-    .option('--no-console', 'console log is disabled')
+    .option( '-r, --remove', 'remove output dir', false )
+    .option( '-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null )
+    .option( '--no-prompt', 'Build prompt is disabled' )
+    .option( '--no-progress', 'Build progress output is disabled' )
+    .option( '--no-console', 'console log is disabled' )
     .description( 'build file, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
     .action( async ( path, dir, options ) => {
         const result = await build( path, dir, env, options );
@@ -68,12 +69,12 @@ program
 
 program
     .command( 'publish [targetPath] [targetDir]' )
-    .option('-r, --remove', 'remove output dir', false)
-    .option('-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null)
-    .option('--no-chunkhash', 'run publish output file not add chunkhash to file name')
-    .option('--no-prompt', 'Build prompt is disabled')
-    .option('--no-progress', 'Build progress output is disabled')
-    .option('--no-console', 'console log is disabled')
+    .option( '-r, --remove', 'remove output dir', false )
+    .option( '-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null )
+    .option( '--no-chunkhash', 'run publish output file not add chunkhash to file name' )
+    .option( '--no-prompt', 'Build prompt is disabled' )
+    .option( '--no-progress', 'Build progress output is disabled' )
+    .option( '--no-console', 'console log is disabled' )
     .description( 'publish file, [targetPath] specify publish directory, [targetDir] specified file in dirTarget.' )
     .action( async ( path, dir, options ) => {
         const result = await publish( path, dir, env, options );
@@ -87,11 +88,26 @@ program
     } );
 
 program
+    .command( 'doctor [targetPath] [targetDir]' )
+    .option( '-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null )
+    .description( 'omg doctor, [targetPath] specify publish directory, [targetDir] specified file in dirTarget.' )
+    .action( async ( path, dir, options ) => {
+        const result = await doctor( path, dir, env, options );
+        if ( result ) {
+            commandDone( 'ok', 'omg doctor task done!' );
+            process.exit( 0 );
+        } else {
+            commandDone( 'err', 'omg doctor task error!' );
+            process.exit( 1 );
+        }
+    } );
+
+program
     .command( 'watch [targetPath] [targetDir]' )
-    .option('-r, --remove', 'remove output dir', false)
-    .option('-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null)
-    .option('--no-prompt', 'Build prompt is disabled')
-    .option('--no-progress', 'Build progress output is disabled')
+    .option( '-r, --remove', 'remove output dir', false )
+    .option( '-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null )
+    .option( '--no-prompt', 'Build prompt is disabled' )
+    .option( '--no-progress', 'Build progress output is disabled' )
     .description( 'build file, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
     .action( async ( path, dir, options ) => {
         const result = await watch( path, dir, env, options );
@@ -106,9 +122,9 @@ program
 
 program
     .command( 'server [targetPath] [targetDir]' )
-    .option('-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null)
-    .option('--no-prompt', 'Build prompt is disabled')
-    .option('--no-progress', 'Build progress output is disabled')
+    .option( '-t, --target <path>', 'Specifies the specified file in the targetPath directory to build', null )
+    .option( '--no-prompt', 'Build prompt is disabled' )
+    .option( '--no-progress', 'Build progress output is disabled' )
     .description( 'dev server, [targetPath] specify build directory, [targetDir] specified file in dirTarget.' )
     .action( async ( path, dir, options ) => {
         const result = await server( path, dir, env, options );
