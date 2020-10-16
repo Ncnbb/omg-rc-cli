@@ -2,7 +2,7 @@
 	"clones": [
 		{
 			"format": "jsx",
-			"foundDate": 1601288024545,
+			"foundDate": 1602238869105,
 			"duplicationA": {
 				"sourceId": "/Users/lamho/Desktop/前端代码/Ncnbb/omg-rc-cli/example/src/react-example/js/index.jsx",
 				"start": {
@@ -40,7 +40,7 @@
 		}
 	],
 	"statistic": {
-		"detectionDate": "2020-09-28T10:13:44.506Z",
+		"detectionDate": "2020-10-09T10:21:08.946Z",
 		"formats": {
 			"tsx": {
 				"sources": {
